@@ -1,7 +1,8 @@
 <div data-controller='loading' class="container-loading">
-  <div class="name-loading">
+  <div data-loading-target='name' class="name-loading">
     <h2>Kévin Tchiadeu</h2>
     <p>DÉVELOPPEUR FULLSTACK</p>
+    <p><%= @age %></p>
   </div>
   <p data-loading-target='counter' class='counter-loading'>0</p>
   <div data-loading-target='bar' class='bar-loading'></div>

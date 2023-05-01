@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = [ 'counter', 'bar' ]
+  static targets = [ 'counter', 'bar', 'name' ]
 
   connect() {
     let count = 0;
@@ -14,6 +14,16 @@ export default class extends Controller {
       if (count == 100) {
         clearInterval(interval);
       }
-    }, 30);
+    }, 20);
+
+    setTimeout(() => {
+      let opacity = 100;
+      setInterval(() => {
+        opacity--;
+        this.counterTarget.style.opacity = `${opacity}%`;
+        this.barTarget.style.opacity = `${opacity}%`;
+        this.nameTarget.style.opacity = `${opacity}%`;
+      }, 1);
+    }, 3000);
   }
 }
