@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = [ 'counter', 'bar', 'name' ]
+  static targets = [ 'counter', 'bar', 'name', 'loadingPage', 'content' ]
 
   connect() {
     let count = 0;
@@ -25,5 +25,10 @@ export default class extends Controller {
         this.nameTarget.style.opacity = `${opacity}%`;
       }, 1);
     }, 3000);
+
+    setTimeout(() => {
+      this.loadingPageTarget.style.display = "none";
+      this.contentTarget.style.display = "block";
+    }, 4000);
   }
 }

@@ -12,7 +12,13 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+
+// External libraries
+@import "font-awesome";
+
+// CSS partials
 @import 'reset.css';
+@import 'home.scss';
 @import 'loading_page.scss';
 @import 'navbar.scss';
