@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = [ 'counter', 'bar', 'name', 'loadingPage', 'content' ]
+  static targets = [ 'counter', 'bar', 'name', 'loadingPage', 'landing' ]
 
   connect() {
     let count = 0;
@@ -28,7 +28,7 @@ export default class extends Controller {
 
     setTimeout(() => {
       this.loadingPageTarget.style.display = "none";
-      this.contentTarget.style.display = "block";
+      this.landingTarget.style.display = "block";
     }, 4000);
   }
 }

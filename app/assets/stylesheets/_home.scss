@@ -1,3 +1,42 @@
-.content {
+.landing {
   display: none;
+}
+
+.container-content {
+  margin: 40px 0 0 215px;
+  width: calc(100% - 215px);
+
+  h1 {
+    font-size: 6vw;
+    font-weight: medium;
+    margin-bottom: 20px;
+  }
+
+  .content-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .content-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30%;
+
+      p {
+        color: #999999;
+        margin-bottom: 20px;
+        font-size: 1.2vw;
+        line-height: 20px;
+      }
+    }
+
+    .content-image {
+      width: 40vw;
+      aspect-ratio: 5/3;
+      object-fit: cover;
+    }
+  }
+
 }

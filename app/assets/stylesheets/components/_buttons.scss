@@ -1,0 +1,17 @@
+.button {
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 15px 20px;
+}
+
+.button-black {
+  background-color: black;
+  color: white;
+}
+
+.button-icone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

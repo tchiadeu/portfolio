@@ -1,25 +1,27 @@
 <div data-controller='loading'>
   <%= render 'loading_page' %>
-  <div data-loading-target='content' class='content'>
+  <div data-loading-target='landing' class='landing'>
     <%= render 'navbar' %>
-    <h1>DÉVELOPPEUR <br>FULLSTACK</h1>
-    <div>
-      <div>
-        <div>
-          <p>Bonjour,
-          <br>Je suis Kévin Tchiadeu, <%= @age %> ans, développeur fullstack freelance basé à Rennes.
-          Je vous propose mes services dans la conception de vos plateformes digitales.</p>
-          <div class="button button-black">
-            <i class="fa-solid fa-envelope"></i>
-            <p>Contactez-moi</p>
+    <div class="container-content">
+      <h1>DÉVELOPPEUR <br>FULLSTACK</h1>
+      <div class='content-infos'>
+        <div class='content-description'>
+          <div>
+            <p>Bonjour,
+            <br>Je suis Kévin Tchiadeu, <%= @age %> ans, développeur fullstack freelance basé à Rennes.
+            Je vous propose mes services dans la conception de vos plateformes digitales.</p>
+            <div class="button button-black button-icone">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Contactez-moi</p>
+            </div>
           </div>
+          <p>test</p> <%# <i class="fa-solid fa-arrow-down"></i> %>
         </div>
-        <i class="fa-solid fa-arrow-down"></i>
+        <%= image_tag 'developpeur_web.jpg', alt: 'developpeur web', class: 'content-image' %>
       </div>
-      <img src="" alt="">
     </div>
+    <%= render 'about' %>
+    <%= render 'projects' %>
+    <%= render 'contact' %>
   </div>
-  <%= render 'about' %>
-  <%= render 'projects' %>
-  <%= render 'contact' %>
 </div>
