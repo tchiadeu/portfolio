@@ -14,5 +14,5 @@
  *= require_self
  */
 @import 'reset.css';
-@import 'home.scss';
+@import 'loading_page.scss';
 @import 'navbar.scss';
