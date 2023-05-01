@@ -1,0 +1,26 @@
+.navbar {
+  width: 80vw;
+  margin: 20px auto 0;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .navbar-name {
+    color: black;
+    font-size: 18px;
+    font-weight: medium;
+  }
+
+  .navbar-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      color: #999999;
+      font-size: 16px;
+    }
+  }
+}
