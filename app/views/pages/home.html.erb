@@ -1,1 +1,25 @@
-<%= render 'loading_page' %>
+<div data-controller='loading'>
+  <%= render 'loading_page' %>
+  <%= render 'navbar' %>
+  <div>
+    <h1>DÉVELOPPEUR <br>FULLSTACK</h1>
+    <div>
+      <div>
+        <div>
+          <p>Bonjour,
+          <br>Je suis Kévin Tchiadeu, <%= @age %> ans, développeur fullstack freelance basé à Rennes.
+          Je vous propose mes services dans la conception de vos plateformes digitales.</p>
+          <div class="button button-black">
+            <i class="fa-solid fa-envelope"></i>
+            <p>Contactez-moi</p>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
+      <img src="" alt="">
+    </div>
+  </div>
+  <%= render 'about' %>
+  <%= render 'projects' %>
+  <%= render 'contact' %>
+</div>
