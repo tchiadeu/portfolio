@@ -1,7 +1,16 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="loading"
 export default class extends Controller {
+  static targets = [ 'counter' ]
+
   connect() {
+    let count = 0;
+    const interval = setInterval(() => {
+      count++;
+      this.counterTarget.textContent = count;
+      if (count == 100) {
+        clearInterval(interval);
+      }
+    }, 30);
   }
 }
