@@ -31,13 +31,12 @@
     position: absolute;
     top: 0;
     right: 0;
-    height: 0;
     width: 10px; // To change by a scaling size
     background-color: white;
-    animation: 3s ease-out 0s 1 loading;
   }
 }
 
+// animation: loading 4s ease-out;
 @keyframes loading {
   0% {
     height: 0;
