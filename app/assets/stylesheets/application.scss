@@ -17,11 +17,14 @@
 // External libraries
 // @import "font-awesome";
 
-// CSS partials
-@import 'reset.css';
-@import 'home.scss';
-@import 'loading_page.scss';
-@import 'navbar.scss';
+// CSS variables
+@import 'config/reset.css';
 
-// CSS compnents
-@import 'components/_buttons.scss';
+// CSS partials
+@import 'pages/loading_page.scss';
+@import 'pages/home.scss';
+@import 'pages/about.scss';
+
+// CSS components
+@import 'components/navbar.scss';
+@import 'components/buttons.scss';

@@ -1,62 +1,68 @@
-<div class="container-about">
-  <div class="about-to-know">
-    <p>À PROPOS</p>
-    <div class="to-know-infos">
-      <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore</h3>
-      <div class="to-know-description"></div>
-        <p>01.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore</p>
-      <div class="to-know-description"></div>
-        <p>02.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore</p>
+<div class="background-about">
+  <div class="container-about">
+    <div class="about-to-know">
+      <p>À PROPOS</p>
+      <div class='to-know-list'>
+        <h3><%= ('Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore').upcase %></h3>
+        <div class="to-know-description">
+          <p>01.</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore</p>
+        </div>
+        <div class="to-know-description">
+          <p>02.</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="about-expertise">
-    <p>EXPERTISES</p>
-    <div class="skills-block">
-      <div class="skill-category">
-        <p>Front-end</p>
-        <div>
-          <div>
-            <%= image_tag 'icone_html', alt: 'icone HTML' %>
-            <p>HTML</p>
-          </div>
-          <div>
-            <%= image_tag 'icone_css', alt: 'icone CSS' %>
-            <p>CSS</p>
-          </div>
-          <div>
-            <%= image_tag 'icone_javascript', alt: 'icone JAVASCRIPT' %>
-            <p>JAVASCRIPT</p>
-          </div>
-          <div>
-            <%= image_tag 'icone_stimulus', alt: 'icone STIMULUS' %>
-            <p>STIMULUS</p>
-          </div>
-        </div>
-      </div>
-      <div class="skill-category">
-        <p>Back-end</p>
-        <div>
-          <div>
-            <%= image_tag 'icone_ruby', alt: 'icone RUBY' %>
-            <p>RUBY</p>
-          </div>
-          <div>
-            <%= image_tag 'icone_rails', alt: 'icone RAILS' %>
-            <p>RAILS</p>
+    <div class="about-expertise">
+      <p>EXPERTISES</p>
+      <div class='skills-list'>
+        <div class="skill-category">
+          <p>Front-end</p>
+          <div class='skill-category-row'>
+            <div class="skill-block">
+              <%= image_tag 'icones_language/icone_html', alt: 'icone HTML' %>
+              <p>HTML</p>
+            </div>
+            <div class="skill-block">
+              <%= image_tag 'icones_language/icone_css', alt: 'icone CSS' %>
+              <p>CSS</p>
+            </div>
+            <div class="skill-block">
+              <%= image_tag 'icones_language/icone_javascript', alt: 'icone JAVASCRIPT' %>
+              <p>JAVASCRIPT</p>
+            </div>
+            <div class="skill-block">
+              <%= image_tag 'icones_language/icone_stimulus', alt: 'icone STIMULUS' %>
+              <p>STIMULUS</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="skill-category">
-        <p>Base de données</p>
-        <div>
-          <%= image_tag 'icone_mysql', alt: 'icone My SQL' %>
-          <p>MySQL</p>
+        <div class="skill-category">
+          <p>Back-end</p>
+          <div class='skill-category-row'>
+            <div class="skill-block">
+              <%= image_tag 'icones_language/icone_ruby', alt: 'icone RUBY' %>
+              <p>RUBY</p>
+            </div>
+            <div class="skill-block">
+              <%= image_tag 'icones_language/icone_rails', alt: 'icone RAILS' %>
+              <p>RAILS</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <%= image_tag 'icone_postgresql', alt: 'icone POSTGRE SQL' %>
-          <p>POSTGRE SQL</p>
+        <div class="skill-category">
+          <p>Base de données</p>
+          <div class='skill-category-row'>
+            <div class="skill-block">
+              <%= image_tag 'icones_language/icone_mysql', alt: 'icone My SQL' %>
+              <p>MySQL</p>
+            </div>
+            <div class="skill-block">
+              <%= image_tag 'icones_language/icone_postgresql', alt: 'icone POSTGRE SQL' %>
+              <p>POSTGRE SQL</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
