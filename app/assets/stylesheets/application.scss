@@ -18,7 +18,9 @@
 // @import "font-awesome";
 
 // CSS variables
-@import 'config/reset.css';
+@import 'config/reset.scss';
+@import 'config/color.scss';
+@import 'config/font.scss';
 
 // CSS partials
 @import 'pages/loading_page.scss';

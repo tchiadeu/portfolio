@@ -1,6 +1,6 @@
 .background-about {
   background-color: black;
-  padding-top: 130px;
+  padding-top: 100px;
 
   .container-about {
     margin: 0 120px 0;
@@ -15,12 +15,7 @@
       flex-direction: row;
       justify-content: space-between;
 
-      p {
-        color: #999999;
-        font-size: 14px;
-      }
-
-      h3, p {
+      h3 {
         color: white;
       }
 
@@ -28,26 +23,31 @@
         font-size: 32px;
         font-weight: medium;
         margin-bottom: 40px;
+        line-height: 35px;
       }
 
-      &:first-child {
-        margin-bottom: 20px;
+      p {
+        font-size: 14px;
+        line-height: 25px;
+        color: #999999;
       }
 
-      &:last-child {
-        margin-bottom: 40px;
+      .to-know-list {
+        p {
+          color: white;
+        }
+
+        &:last-child {
+          margin-bottom: 100px;
+        }
       }
+
 
       .to-know-description {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         gap: 180px;
-
-        &:last-child {
-          font-size: 18px;
-          color: white;
-        }
       }
     }
 
