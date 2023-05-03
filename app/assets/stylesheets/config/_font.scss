@@ -1,9 +1,21 @@
+@font-face {
+  font-family: 'Neue Montreal medium';
+  src: url('../fonts/Neue_Montreal_Medium_500.otf');
+}
+
+@font-face {
+  font-family: 'Neue Montreal regular';
+  src: url('../fonts/Neue_Montreal_Medium_500.otf');
+}
+
+
 h1, h2, h3, h4, p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Neue Montreal medium', sans-serif;
   font-weight: 500;
 }
 
 .text-regular {
+  font-family: 'Neue Montreal regular', sans-serif;
   font-weight: 400;
 }
 

@@ -18,3 +18,11 @@
   padding-top: 125px;
   padding-bottom: 125px;
 }
+
+.contact-container {
+  margin: 0 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
