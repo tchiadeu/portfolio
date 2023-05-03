@@ -1,0 +1,73 @@
+.projects-title {
+  margin: 0 7vw;
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: 100px;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.6vw;
+
+  .project-card {
+    width: 40.8vw;
+
+    .project-cover {
+      width: 100%;
+      aspect-ratio: 1/1;
+      position: relative;
+
+      .project-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .project-date, .project-skill {
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(4px);
+        padding: 0.5vw;
+      }
+
+      .project-date, .project-skills-list {
+        position: absolute;
+      }
+
+      .project-date {
+        top: 10px;
+        left: 10px;
+      }
+
+      .project-skills-list {
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+      }
+    }
+
+    .project-infos {
+      margin-top: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .project-icone-plus {
+        width: 2.7vw;
+        aspect-ratio: 1/1;
+        border: solid 1px black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
