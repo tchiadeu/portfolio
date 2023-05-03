@@ -16,32 +16,14 @@
       justify-content: space-between;
 
       h3 {
-        color: white;
-      }
-
-      h3 {
-        font-size: 32px;
-        font-weight: medium;
         margin-bottom: 40px;
-        line-height: 35px;
-      }
-
-      p {
-        font-size: 14px;
-        line-height: 25px;
-        color: #999999;
       }
 
       .to-know-list {
-        p {
-          color: white;
-        }
-
         &:last-child {
           margin-bottom: 100px;
         }
       }
-
 
       .to-know-description {
         display: flex;
@@ -55,11 +37,6 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-
-      p {
-        color: #999999;
-        font-size: 14px;
-      }
 
       .skill-category-row {
         display: flex;
@@ -78,8 +55,6 @@
           p {
             position: absolute;
             bottom: 10px;
-            color: white;
-            font-size: 14px;
           }
         }
       }
