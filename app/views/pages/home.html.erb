@@ -1,7 +1,7 @@
 <div data-controller='loading'>
   <%= render 'loading_page' %>
-  <div class="container">
-    <div data-loading-target='landing' class='landing'>
+  <div data-loading-target='landing' class='landing'>
+    <div class="container-white">
       <%= render 'navbar' %>
       <div class="container-content">
         <h1>DÉVELOPPEUR <br>FULLSTACK</h1>
@@ -21,9 +21,9 @@
           <%= image_tag 'developpeur_web.jpg', alt: 'developpeur web', class: 'content-image' %>
         </div>
       </div>
-      <%= render 'about' %>
-      <%= render 'projects' %>
-      <%= render 'contact' %>
     </div>
+    <%= render 'about' %>
+    <%= render 'projects' %>
+    <%= render 'contact' %>
   </div>
 </div>

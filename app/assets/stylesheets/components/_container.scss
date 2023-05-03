@@ -1,3 +1,11 @@
-.container {
-  margin: 0 9.3vw;
+.container-white, .container-black {
+  padding: 0 9.3vw;
+}
+
+.container-white {
+  background-color: white;
+}
+
+.container-black {
+  background-color: black;
 }

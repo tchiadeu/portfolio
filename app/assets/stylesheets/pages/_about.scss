@@ -1,63 +1,58 @@
-.background-about {
-  background-color: black;
-  padding-top: 100px;
+.container-about {
+  margin: 0 120px 0;
+  width: calc(100vw-120px);
 
-  .container-about {
-    margin: 0 120px 0;
-    width: calc(100vw-120px);
+  .to-know-list, .skills-list {
+    width: 60vw;
+  }
 
-    .to-know-list, .skills-list {
-      width: 60vw;
+  .about-to-know {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h3 {
+      margin-bottom: 40px;
     }
 
-    .about-to-know {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      h3 {
-        margin-bottom: 40px;
-      }
-
-      .to-know-list {
-        &:last-child {
-          margin-bottom: 100px;
-        }
-      }
-
-      .to-know-description {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 180px;
+    .to-know-list {
+      &:last-child {
+        margin-bottom: 100px;
       }
     }
 
-    .about-expertise {
+    .to-know-description {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      gap: 180px;
+    }
+  }
 
-      .skill-category-row {
+  .about-expertise {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .skill-category-row {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      .skill-block {
+        width: 180px;
+        aspect-ratio: 1/1;
+        background-color: #1F1F1F;
+        position: relative;
+        justify-content: center;
         display: flex;
-        flex-direction: row;
-        gap: 20px;
+        align-items: center;
 
-        .skill-block {
-          width: 180px;
-          aspect-ratio: 1/1;
-          background-color: #1F1F1F;
-          position: relative;
-          justify-content: center;
-          display: flex;
-          align-items: center;
-
-          p {
-            position: absolute;
-            bottom: 10px;
-          }
+        p {
+          position: absolute;
+          bottom: 10px;
         }
       }
     }
   }
-}
+  }
