@@ -1,7 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = [ 'counter', 'bar', 'name', 'loadingPage', 'landing' ]
+  static targets = [ 'counter', 'bar', 'name', 'loadingPage', 'landing',
+                     'navbar' ]
 
   connect() {
     let count = 0;
