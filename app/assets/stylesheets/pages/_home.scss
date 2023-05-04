@@ -29,10 +29,11 @@
       justify-content: space-between;
       width: 26.6vw;
 
-      &:first-of-type {
-        p {
-          margin-bottom: 30px;
-        }
+      .content-description-principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
       }
     }
 

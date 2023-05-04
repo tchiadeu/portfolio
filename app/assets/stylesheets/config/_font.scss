@@ -1,22 +1,22 @@
 @font-face {
-  font-family: 'Neue Montreal medium';
-  src: url('../fonts/Neue_Montreal_Medium_500.otf');
+  font-family: 'montreal';
+  src: url('fonts/Neue_Montreal_Medium_400.otf') format('opentype');
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: 'Neue Montreal regular';
-  src: url('../fonts/Neue_Montreal_Medium_500.otf');
+  font-family: 'montreal';
+  src: url('fonts/Neue_Montreal_Medium_500.otf') format('opentype');
+  font-weight: medium;
 }
 
-
 h1, h2, h3, h4, p {
-  font-family: 'Neue Montreal medium', sans-serif;
-  font-weight: 500;
+  font-family: 'montreal';
+  font-weight: medium;
 }
 
 .text-regular {
-  font-family: 'Neue Montreal regular', sans-serif;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 h1 {
@@ -53,6 +53,10 @@ p {
 
 .text-small {
   font-size: 0.8vw;
+}
+
+.spacing-between-line {
+  line-height: 1.5;
 }
 
 .text-custom {
