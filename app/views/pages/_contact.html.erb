@@ -1,8 +1,8 @@
 <div id='contact' class="container-black container-padding-y">
-  <div class="contact-container">
+  <div data-controller='clipboard' class="contact-container">
     <p class='text-grey'>CONTACTEZ MOI</p>
-    <h1 class='text-white'>KEVIN.TCHIADEU<br>@GMAIL.COM</h1>
-    <div class="button button-black">
+    <h1 data-clipboard-target='mail' class='text-white'>kevin.tchiadeu<br>@gmail.com</h1>
+    <div data-action='click->clipboard#copy' class="button button-black">
       <i class="fa-regular fa-clone"></i>
       <p class='text-white'>Copiez</p>
     </div>
