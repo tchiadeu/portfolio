@@ -1,8 +1,14 @@
 <div class='navbar'>
   <p class='text-large'>Kévin Tchiadeu</p>
   <div class='navbar-options'>
-    <div class='button'><p class='text-medium text-grey text-regular'>À propos</p></div>
-    <div class='button'><p class='text-medium text-grey text-regular'>Projets</p></div>
-    <div class='button'><p class='text-medium text-grey text-regular'>Contact</p></div>
+    <div data-action='click->scroll#scrollToAbout' class='button'>
+      <p class='text-medium text-grey text-regular'>À propos</p>
+    </div>
+    <div data-action='click->scroll#scrollToProjects' class='button'>
+      <p class='text-medium text-grey text-regular'>Projets</p>
+    </div>
+    <div data-action='click->scroll#scrollToContact' class='button'>
+      <p class='text-medium text-grey text-regular'>Contact</p>
+    </div>
   </div>
 </div>
