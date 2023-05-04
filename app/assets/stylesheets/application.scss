@@ -17,12 +17,13 @@
 // External libraries
 @import "font-awesome";
 
-// CSS variables
+// CSS config
 @import 'config/reset.scss';
 @import 'config/color.scss';
 @import 'config/font.scss';
+@import 'config/animation.scss';
 
-// CSS partials
+// CSS pages
 @import 'pages/loading_page.scss';
 @import 'pages/home.scss';
 @import 'pages/about.scss';
