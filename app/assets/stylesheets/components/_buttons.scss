@@ -2,10 +2,11 @@
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  padding: 15px;
+  width: fit-content;
 }
 
 .button-black {
+  padding: 15px;
   background-color: black;
   color: white;
   border: solid 1px white;
@@ -14,5 +15,10 @@
   justify-content: space-around;
   align-items: center;
   gap: 10px;
-  width: fit-content;
+}
+
+.button-home {
+  opacity: 0;
+  animation: slide-in-text 500ms ease-in-out forwards;
+  animation-delay: 2s;
 }

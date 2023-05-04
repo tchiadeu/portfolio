@@ -30,6 +30,6 @@ export default class extends Controller {
     setTimeout(() => {
       this.loadingPageTarget.style.display = "none";
       this.landingTarget.style.display = "block";
-    }, 4000);
+    }, 4500);
   }
 }

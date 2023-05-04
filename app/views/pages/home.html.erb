@@ -11,14 +11,19 @@
               <p class='text-large text-regular text-grey spacing-between-line'>👋 Bonjour,
               <br>Je suis Kévin Tchiadeu, <%= @age %> ans, développeur fullstack freelance basé à Rennes.
               Je vous propose mes services dans la conception de vos plateformes digitales.</p>
-              <div class="button button-black">
+              <div class="button button-black button-home">
                 <i class="fa-solid fa-envelope"></i>
                 <p class='text-white'>Contactez-moi</p>
               </div>
             </div>
-            <i class="fa-solid fa-arrow-down"></i>
+            <div class="button"><i class="fa-solid fa-arrow-down"></i></div>
           </div>
-          <%= image_tag 'developpeur_web.jpg', alt: 'developpeur web', class: 'content-image' %>
+          <div class="content-cover-position">
+            <div class="content-cover">
+              <div class="content-cover-filter"></div>
+              <%= image_tag 'developpeur_web.jpg', alt: 'developpeur web', class: 'content-image' %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
