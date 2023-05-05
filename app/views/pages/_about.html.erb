@@ -1,22 +1,24 @@
 <div data-scroll-target='about' class="container-black container-padding-y">
   <div class="about-disclaimer">
-    <p class='text-grey'>À PROPOS</p>
+    <p data-appear-target='leftAppear' class='text-grey'>À PROPOS</p>
     <div class='disclaimer-list'>
-      <h3 class='text-white spacing-between-line'><%= ('Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore').upcase %></h3>
-      <div class="disclaimer-description">
+      <h3 data-appear-target='bottomAppear' class='text-white spacing-between-line'>
+        <%= ('Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore').upcase %>
+      </h3>
+      <div data-appear-target='bottomAppear' class="disclaimer-description">
         <p class='text-grey'>01.</p>
         <p class='text-large text-white text-regular spacing-between-line'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore</p>
       </div>
-      <div class="disclaimer-description">
+      <div data-appear-target='bottomAppear' class="disclaimer-description">
         <p class='text-grey'>02.</p>
         <p class='text-large text-white text-regular spacing-between-line'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore</p>
       </div>
     </div>
   </div>
   <div class="about-expertise">
-    <p class='text-grey'>EXPERTISES</p>
+    <p data-appear-target='leftAppear' class='text-grey'>EXPERTISES</p>
     <div>
-      <div class="skill-category">
+      <div data-appear-target='bottomAppear' class="skill-category">
         <h4 class='text-white'>Front-end</h4>
         <div class='skill-category-row'>
           <div class="skill-block">
@@ -37,7 +39,7 @@
           </div>
         </div>
       </div>
-      <div class="skill-category">
+      <div data-appear-target='bottomAppear' class="skill-category">
         <h4 class='text-white'>Back-end</h4>
         <div class='skill-category-row'>
           <div class="skill-block">
@@ -50,7 +52,7 @@
           </div>
         </div>
       </div>
-      <div class="skill-category">
+      <div data-appear-target='bottomAppear' class="skill-category">
         <h4 class='text-white'>Base de données</h4>
         <div class='skill-category-row'>
           <div class="skill-block">

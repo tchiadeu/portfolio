@@ -1,11 +1,10 @@
-.slide-in-from-bottom {
+.slide-in-bottom {
   animation: slide-in-from-bottom 500ms ease-in-out forwards;
 }
 
-.slide-in-from-left {
+.slide-in-left {
   animation: slide-in-from-left 500ms ease-in-out forwards;
 }
-
 
 @keyframes slide-in-from-bottom {
   0% {
