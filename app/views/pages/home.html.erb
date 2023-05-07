@@ -12,11 +12,13 @@
               <br>Je suis Kévin Tchiadeu, <%= @age %> ans, développeur fullstack freelance basé à Rennes.
               Je vous propose mes services dans la conception de vos plateformes digitales.</p>
               <div class="button button-black button-home">
-                <i class="fa-solid fa-envelope"></i>
+                <%= image_tag 'icones/mail.svg' %>
                 <p class='text-white'>Contactez-moi</p>
               </div>
             </div>
-            <div data-action='click->scroll#scrollToAbout' class="button"><i class="fa-solid fa-arrow-down"></i></div>
+            <div data-action='click->scroll#scrollToAbout' class="button">
+              <%= image_tag 'icones/arrow.svg' %>
+            </div>
           </div>
           <div class="content-cover-position">
             <div class="content-cover">
