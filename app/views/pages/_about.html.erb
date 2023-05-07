@@ -1,26 +1,26 @@
 <div data-scroll-target='about' class="container-black container-padding-y">
   <div class="about-disclaimer">
-    <p data-appear-target='leftAppear' class='text-grey'>À PROPOS</p>
+    <p data-appear-target='appear' class='text-grey hidden-left'>À PROPOS</p>
     <div class='disclaimer-list'>
-      <h3 data-appear-target='bottomAppear' class='text-white spacing-between-line'>
+      <h3 data-appear-target='appear' class='text-white spacing-between-line hidden-bottom'>
         <%= ('Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore').upcase %>
       </h3>
-      <div data-appear-target='bottomAppear' class="disclaimer-description">
+      <div data-appear-target='appear' class="disclaimer-description hidden-bottom">
         <p class='text-grey'>01.</p>
         <p class='text-large text-white text-regular spacing-between-line'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore</p>
       </div>
-      <div data-appear-target='bottomAppear' class="disclaimer-description">
+      <div data-appear-target='appear' class="disclaimer-description hidden-bottom">
         <p class='text-grey'>02.</p>
         <p class='text-large text-white text-regular spacing-between-line'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ipsa totam perferendis sed, fugit labore quibusdam unde voluptate quo inventore</p>
       </div>
     </div>
   </div>
   <div class="about-expertise">
-    <p data-appear-target='leftAppear' class='text-grey'>EXPERTISES</p>
+    <p data-appear-target='appear' class='text-grey hidden-left'>EXPERTISES</p>
     <div>
-      <div data-appear-target='bottomAppear' class="skill-category">
-        <h4 class='text-white'>Front-end</h4>
-        <div class='skill-category-row'>
+      <div class="skill-category">
+        <h4 data-appear-target='appear' class='text-white hidden-bottom'>Front-end</h4>
+        <div data-appear-target='appear' class='skill-category-row hidden-bottom'>
           <div class="skill-block">
             <%= image_tag 'icones_language/icone_html.svg', alt: 'icone HTML' %>
             <p class='text-white'>HTML</p>
@@ -39,9 +39,9 @@
           </div>
         </div>
       </div>
-      <div data-appear-target='bottomAppear' class="skill-category">
-        <h4 class='text-white'>Back-end</h4>
-        <div class='skill-category-row'>
+      <div class="skill-category">
+        <h4 data-appear-target='appear' class='text-white hidden-bottom'>Back-end</h4>
+        <div data-appear-target='appear' class='skill-category-row hidden-bottom'>
           <div class="skill-block">
             <%= image_tag 'icones_language/icone_ruby.svg', alt: 'icone RUBY' %>
             <p class='text-white'>RUBY</p>
@@ -52,9 +52,9 @@
           </div>
         </div>
       </div>
-      <div data-appear-target='bottomAppear' class="skill-category">
-        <h4 class='text-white'>Base de données</h4>
-        <div class='skill-category-row'>
+      <div class="skill-category">
+        <h4 data-appear-target='appear' class='text-white hidden-bottom'>Base de données</h4>
+        <div data-appear-target='appear' class='skill-category-row hidden-bottom'>
           <div class="skill-block">
             <%= image_tag 'icones_language/icone_mysql.svg', alt: 'icone My SQL' %>
             <p class='text-white'>MySQL</p>

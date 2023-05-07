@@ -1,10 +1,10 @@
 <div data-scroll-target='projects' class="container-white container-padding-y">
-  <div data-appear-target='bottomAppear' class="projects-title">
+  <div data-appear-target='appear' class="projects-title hidden-bottom">
     <p class='text-grey'>2023</p>
     <h2>PROJETS RÉALISÉS</h2>
   </div>
-  <div data-appear-target='bottomAppear' class="projects-grid">
-    <div class="project-card">
+  <div class="projects-grid">
+    <div data-appear-target='appear' class="project-card hidden-bottom">
       <div class="project-cover">
         <%= image_tag 'projects_cover/test.jpg', class: 'project-image'%>
         <div class="project-date">
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    <div class="project-card">
+    <div data-appear-target='appear' class="project-card hidden-bottom">
       <div class="project-cover">
         <%= image_tag 'projects_cover/test.jpg', class: 'project-image'%>
         <div class="project-date">
@@ -72,7 +72,7 @@
         </div>
       </div>
     </div>
-    <div class="project-card">
+    <div data-appear-target='appear' class="project-card hidden-bottom">
       <div class="project-cover">
         <%= image_tag 'projects_cover/test.jpg', class: 'project-image'%>
         <div class="project-date">
@@ -106,7 +106,7 @@
         </div>
       </div>
     </div>
-    <div class="project-card">
+    <div data-appear-target='appear' class="project-card hidden-bottom">
       <div class="project-cover">
         <%= image_tag 'projects_cover/test.jpg', class: 'project-image'%>
         <div class="project-date">
@@ -133,7 +133,7 @@
       <div class="project-infos">
         <div>
           <p class='text-biggest'>BREIZH SECRETS</p>
-          <p class='text-grey text-regular'>Site de partage de secrets</p>
+          <p class='text-grey'>Site de partage de secrets</p>
         </div>
         <div class='project-icone-plus'>
           <i class="fa-solid fa-plus"></i>

@@ -2,32 +2,27 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="appear"
 export default class extends Controller {
-  static targets = [ "leftAppear", "bottomAppear" ]
+  static targets = [ "appear" ]
 
   connect() {
-    console.log(this.leftAppearTargets)
-    this.observer = new IntersectionObserver((entries) => {
+    const ratio = 0.5
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: ratio
+    }
+
+    const handleIntersect = (entries, observer) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          this.addAnimation()
+        if (entry.intersectionRatio > ratio) {
+          entry.target.classList.add("reveal")
+          observer.unobserve(entry.target)
         }
       })
+    }
+    const observer = new IntersectionObserver(handleIntersect, options)
+    this.appearTargets.forEach(target => {
+      observer.observe(target)
     })
-    Array.from(this.targets).forEach((target) => {
-      this.observer.observe(target)
-    })
-  }
-
-  addAnimation() {
-    this.leftAppearTargets.forEach((target) => {
-      target.classList.add("slide-in-left")
-    })
-    this.bottomAppearTargets.forEach((target) => {
-      target.classList.add("slide-in-bottom")
-    })
-  }
-
-  disconnect() {
-    this.observer.disconnect()
   }
 }
