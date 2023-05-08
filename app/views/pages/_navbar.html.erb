@@ -1,15 +1,21 @@
 <div class='navbar'>
-  <p class='text-large'>Kévin Tchiadeu</p>
+  <p data-smartphone-target='navbarName' class='text-biggest'>Kévin Tchiadeu</p>
   <div class='navbar-options'>
     <div data-action='click->scroll#scrollToAbout' class='button'>
-      <p class='text-medium text-grey text-regular'>À propos</p>
+      <p class='text-large text-grey text-regular'>À propos</p>
     </div>
     <div data-action='click->scroll#scrollToProjects' class='button'>
-      <p class='text-medium text-grey text-regular'>Projets</p>
+      <p class='text-large text-grey text-regular'>Projets</p>
     </div>
     <div data-action='click->scroll#scrollToContact' class='button'>
-      <p class='text-medium text-grey text-regular'>Contact</p>
+      <p class='text-large text-grey text-regular'>Contact</p>
     </div>
   </div>
-  <%= image_tag 'icones/burger.svg', class: 'icone-burger', data: {action: 'click->scroll#scrollToAbout'} %>
+  <%= image_tag 'icones/burger.svg', class: 'icone-burger',
+                data: {action: 'click->smartphone#navbarOptions', smartphone_target: 'navbarBurger'} %>
+  <div data-smartphone-target='navbarOptions' class='navbar-options-smartphone'>
+    <p class="text-biggest text-regular">À propos</p>
+    <p class="text-biggest text-regular">Projets</p>
+    <p class="text-biggest text-regular">Contact</p>
+  </div>
 </div>
