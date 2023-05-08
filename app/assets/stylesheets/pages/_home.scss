@@ -82,18 +82,18 @@ h1 {
   }
 }
 
-@media screen and (min-aspect-ratio: 8/5) {
+@media screen and (min-aspect-ratio: 8/5) { // have to change by max-height
   h1 {
     margin-bottom: 30px;
   }
 
   .content-description {
-    height: 442px;
+    height: 442px; //have to change this value by a smaller height
   }
 
   .content-cover {
-    width: 708px;
-    height: 442px;
+    width: 708px; //have to change this value by a smaller width
+    height: 442px; //have to change this value by a smaller height
   }
 }
 
