@@ -68,42 +68,32 @@ h1 {
 }
 
 @media screen and (max-aspect-ratio: 8/5) {
-  :root {
-    --content-cover-width: 49vw;
-    --content-cover-aspect-ratio: 5/3;
-  }
-
   h1 {
     margin-bottom: 70px;
   }
 
   .content-description {
-    height: calc(var(--content-cover-width) / var(--content-cover-aspect-ratio));
+    height: 442px;
   }
 
   .content-cover {
-    width: var(--content-cover-width);
-    aspect-ratio: var(--content-cover-aspect-ratio);
+    width: 708px;
+    height: 442px;
   }
 }
 
 @media screen and (min-aspect-ratio: 8/5) {
-  :root {
-    --content-cover-width: 40vw;
-    --content-cover-aspect-ratio: 2/1;
-  }
-
   h1 {
     margin-bottom: 30px;
   }
 
   .content-description {
-    height: calc(var(--content-cover-width) / var(--content-cover-aspect-ratio));;
+    height: 442px;
   }
 
   .content-cover {
-    width: var(--content-cover-width);
-    aspect-ratio: var(--content-cover-aspect-ratio);
+    width: 708px;
+    height: 442px;
   }
 }
 
