@@ -13,7 +13,8 @@
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1.6vw;
+  grid-row-gap: 1.6vw;
+  grid-column-gap: 80px;
 
   .project-card {
     width: 40.8vw;
