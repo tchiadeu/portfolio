@@ -6,12 +6,28 @@
   opacity: 0;
   animation: slide-in-navbar 500ms ease-in-out forwards;
   animation-delay: 3500ms;
+}
 
+@media (min-width: 575px) {
   .navbar-options {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 70px;
+  }
+
+  .icone-burger {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar-options {
+    display: none;
+  }
+
+  .icone-burger {
+    display: block;
   }
 }
 

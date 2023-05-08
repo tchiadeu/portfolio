@@ -2,71 +2,67 @@
   display: none;
 }
 
-.container-content {
-  margin: 0 7vw;
+h1 {
+  opacity: 0;
+  animation: slide-in-text 500ms ease-in-out forwards;
+  animation-delay: 1s;
+}
 
-  h1 {
-    opacity: 0;
-    animation: slide-in-text 500ms ease-in-out forwards;
-    animation-delay: 1s;
-  }
+.content-infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-  .content-infos {
+  .content-description {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    width: 26.6vw;
 
-    .content-description {
+    .content-description-principal {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 26.6vw;
-
-      .content-description-principal {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 30px;
-        opacity: 0;
-        animation: slide-in-text 500ms ease-in-out forwards;
-        animation-delay: 1500ms;
-      }
-
-      .arrow-down {
-        opacity: 0;
-        animation: slide-in-text 500ms ease-in-out forwards 3500ms,
-                   rebound 700ms ease-in-out infinite 4s;
-      }
+      gap: 30px;
+      opacity: 0;
+      animation: slide-in-text 500ms ease-in-out forwards;
+      animation-delay: 1500ms;
     }
 
-    .content-cover-position {
+    .arrow-down {
+      opacity: 0;
+      animation: slide-in-text 500ms ease-in-out forwards 3500ms,
+                 rebound 700ms ease-in-out infinite 4s;
+    }
+  }
+
+  .content-cover-position {
+    position: absolute;
+    right: 0;
+  }
+
+  .content-cover {
+    position: relative;
+    overflow: hidden;
+
+    .content-cover-filter, .content-image {
       position: absolute;
-      right: 0;
+      width: 100%;
+      height: 100%;
     }
 
-    .content-cover {
-      position: relative;
-      overflow: hidden;
+    .content-cover-filter {
+      background-color: white;
+      z-index: 1;
+      animation: filter-disappear 1s ease-in-out forwards;
+      animation-delay: 2500ms;
+    }
 
-      .content-cover-filter, .content-image {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-
-      .content-cover-filter {
-        background-color: white;
-        z-index: 1;
-        animation: filter-disappear 1s ease-in-out forwards;
-        animation-delay: 2500ms;
-      }
-
-      .content-image {
-        object-fit: cover;
-        scale: 1.2;
-        animation: image-appear 1s ease-in-out forwards;
-        animation-delay: 2500ms;
-      }
+    .content-image {
+      object-fit: cover;
+      scale: 1.2;
+      animation: image-appear 1s ease-in-out forwards;
+      animation-delay: 2500ms;
     }
   }
 }

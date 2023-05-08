@@ -20,12 +20,19 @@
   padding-bottom: 125px;
 }
 
-.contact-container {
-  margin: 0 7vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
+
+@media (min-width: 576px) {
+  .container-content {
+    margin: 0 7vw;
+  }
+
+  .contact-container {
+    margin: 0 7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+  }
 }
 
 @keyframes slide-in-Y {
