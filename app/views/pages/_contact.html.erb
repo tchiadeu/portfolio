@@ -1,10 +1,11 @@
 <div data-smartphone-target='contact' data-scroll-target='contact' class="container-black container-padding-y">
-  <div data-controller='clipboard' class="contact-container">
+  <div data-controller='clipboard' class="container-contact">
     <p data-appear-target='appear' class='text-grey hidden-bottom'>CONTACTEZ MOI</p>
     <h1 data-appear-target='appear' data-clipboard-target='mail' class='text-white hidden-bottom'>kevin.tchiadeu<br>@gmail.com</h1>
-    <div data-appear-target='appear' data-action='click->clipboard#copy' class="button button-black hidden-bottom">
+    <div data-appear-target='appear' data-action='click->clipboard#copy mouseleave->clipboard#resetText'
+         class="button button-black button-copy hidden-bottom">
       <%= image_tag 'icones/copy.svg' %>
-      <p class='text-white'>Copier</p>
+      <p data-clipboard-target='text' class='text-white'>Copier</p>
     </div>
   </div>
 </div>

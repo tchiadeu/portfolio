@@ -1,9 +1,14 @@
-.contact-container {
-  p {
+.container-contact {
+
+  .text-grey {
     margin-bottom: 40px;
   }
 
   h1 {
     margin-bottom: 60px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

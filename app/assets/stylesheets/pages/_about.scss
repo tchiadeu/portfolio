@@ -2,6 +2,13 @@
     width: 55vw;
   }
 
+  .about-disclaimer, .about-expertise {
+    .hidden-left {
+      height: fit-content;
+      vertical-align: middle;
+    }
+  }
+
   .about-disclaimer {
     display: flex;
     flex-direction: row;
