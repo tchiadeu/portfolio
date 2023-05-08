@@ -32,7 +32,7 @@ h1 {
     .arrow-down {
       opacity: 0;
       animation: slide-in-text 500ms ease-in-out forwards 3500ms,
-                 rebound 700ms ease-in-out infinite 4s;
+                 rebound 1s cubic-bezier(0.42, 0.0, 1.0, 1.0) infinite 4s;
     }
   }
 
@@ -141,7 +141,7 @@ h1 {
     transform: translateY(0);
   } 25% {
     transform: translateY(-5px);
-  } 50% {
+    } 50% {
     transform: translateY(0);
   } 75% {
     transform: translateY(5px);
