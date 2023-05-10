@@ -15,6 +15,9 @@
   justify-content: space-between;
 
   .disclaimer-list {
+    h3 {
+      text-transform: uppercase;
+    }
     .disclaimer-description {
       display: flex;
       flex-direction: row;
