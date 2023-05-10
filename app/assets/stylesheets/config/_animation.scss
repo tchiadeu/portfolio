@@ -1,15 +1,17 @@
-.hidden-bottom {
-  opacity: 0;
-  transform: translateY(50%);
-}
+@media (min-width: 576px) {
+  .hidden-bottom {
+    opacity: 0;
+    transform: translateY(50%);
+  }
 
-.hidden-left {
-  opacity: 0;
-  transform: translateX(-50%);
-}
+  .hidden-left {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
 
-.reveal {
-  opacity: 1;
-  transform: translate(0);
-  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+  .reveal {
+    opacity: 1;
+    transform: translate(0);
+    transition: 1s cubic-bezier(0.5, 0, 0, 1);
+  }
 }

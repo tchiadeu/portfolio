@@ -32,7 +32,7 @@
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
   .navbar-options {
     display: none;
   }
@@ -40,9 +40,13 @@
   .icone-burger {
     display: block;
   }
+
+  .navbar {
+    padding: 25px 0 85px;
+  }
 }
 
-@media (max-height: 700px) {
+@media (min-width: 576px) and (max-height: 700px) {
   .navbar {
     padding: 30px 0;
   }
