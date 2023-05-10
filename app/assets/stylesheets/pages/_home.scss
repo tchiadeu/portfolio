@@ -65,6 +65,20 @@ h1 {
   }
 }
 
+.smartphone-options {
+  display: none;
+  margin: auto 0;
+
+  p {
+    color: white;
+    font-size: 30px;
+
+    &:first-of-type {
+      margin: 45px 0;
+    }
+  }
+}
+
 @media (max-width: 576px) {
   h1 {
     margin-bottom: 30px;

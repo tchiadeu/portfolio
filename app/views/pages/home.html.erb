@@ -1,9 +1,20 @@
 <div data-controller='loading'>
   <%= render 'loading_page' %>
   <div data-controller='scroll appear smartphone' data-loading-target='landing' class='landing'>
-    <div class="container-white container-full-height">
+    <div data-smartphone-target='background' class="container-white container-full-height">
       <%= render 'navbar' %>
-      <div class="container-content">
+      <div data-smartphone-target='smartphoneOptions' class='smartphone-options'>
+        <div data-action='click->smartphone#scrollToAbout' class='button'>
+          <p class='text-large text-grey text-regular'>À propos</p>
+        </div>
+        <div data-action='click->smartphone#scrollToProjects' class='button'>
+          <p class='text-large text-grey text-regular'>Projets</p>
+        </div>
+        <div data-action='click->smartphone#scrollToContact' class='button'>
+          <p class='text-large text-grey text-regular'>Contact</p>
+        </div>
+      </div>
+      <div data-smartphone-target='content' class="container-content">
         <h1>développeur <br>fullstack</h1>
         <div class='content-infos'>
           <div class='content-description'>

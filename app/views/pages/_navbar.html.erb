@@ -13,9 +13,6 @@
   </div>
   <%= image_tag 'icones/burger.svg', class: 'icone-burger',
                 data: {action: 'click->smartphone#navbarOptions', smartphone_target: 'navbarBurger'} %>
-  <div data-smartphone-target='navbarOptions' class='navbar-options-smartphone'>
-    <p class="text-biggest text-regular">À propos</p>
-    <p class="text-biggest text-regular">Projets</p>
-    <p class="text-biggest text-regular">Contact</p>
-  </div>
+  <%= image_tag 'icones/cross.svg', class: 'icone-cross',
+                data: {action: 'click->smartphone#closeOptions', smartphone_target: 'navbarCross'} %>
 </div>
