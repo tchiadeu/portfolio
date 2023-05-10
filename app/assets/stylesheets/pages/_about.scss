@@ -1,81 +1,101 @@
-  .disclaimer-list, .skills-list {
-    width: 55vw;
-  }
+.disclaimer-list, .skills-list {
+  width: 55vw;
+}
 
-  .about-disclaimer, .about-expertise {
-    .hidden-left {
-      height: fit-content;
-      vertical-align: middle;
+.about-disclaimer, .about-expertise {
+  .hidden-left {
+    height: fit-content;
+    vertical-align: middle;
+  }
+}
+
+.about-disclaimer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .disclaimer-list {
+    .disclaimer-description {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 13vw;
+
+      &:first-of-type {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.about-expertise {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .skill-category {
+    margin-bottom: 80px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h4 {
+      margin-bottom: 50px;
+    }
+
+    .skill-category-row {
+      display: flex;
+      flex-direction: row;
+      gap: 1.65vw;
+
+      .skill-block {
+        width: 12.5vw;
+        aspect-ratio: 1/1;
+        background-color: #1F1F1F;
+        position: relative;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 30%;
+          aspect-ratio: 1/1;
+        }
+
+        p {
+          position: absolute;
+          bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 700px) {
+  .about-disclaimer {
+    h3 {
+      margin-bottom: 80px;
     }
   }
 
-  .about-disclaimer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .disclaimer-list {
+    &:last-child {
+      margin-bottom: 100px;
+    }
+  }
+}
 
+@media (min-height: 700px) {
+  .about-disclaimer {
     h3 {
       margin-bottom: 100px;
     }
-
-    .disclaimer-list {
-      .disclaimer-description {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 13vw;
-
-        &:first-of-type {
-          margin-bottom: 40px;
-        }
-      }
-
-      &:last-child {
-        margin-bottom: 150px;
-      }
-    }
   }
 
-  .about-expertise {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    .skill-category {
-      margin-bottom: 80px;
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-
-      h4 {
-        margin-bottom: 50px;
-      }
-
-      .skill-category-row {
-        display: flex;
-        flex-direction: row;
-        gap: 1.65vw;
-
-        .skill-block {
-          width: 12.5vw;
-          aspect-ratio: 1/1;
-          background-color: #1F1F1F;
-          position: relative;
-          justify-content: center;
-          display: flex;
-          align-items: center;
-
-          img {
-            width: 30%;
-            aspect-ratio: 1/1;
-          }
-
-          p {
-            position: absolute;
-            bottom: 30px;
-          }
-        }
-      }
+  .disclaimer-list {
+    &:last-child {
+      margin-bottom: 150px;
     }
   }
+}

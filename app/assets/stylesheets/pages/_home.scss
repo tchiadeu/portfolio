@@ -23,7 +23,6 @@ h1 {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 40px;
       opacity: 0;
       animation: slide-in-text 500ms ease-in-out forwards;
       animation-delay: 1500ms;
@@ -67,35 +66,44 @@ h1 {
   }
 }
 
-@media screen and (max-aspect-ratio: 8/5) {
-  h1 {
-    margin-bottom: 70px;
-  }
-
-  .content-description {
-    height: 442px;
-  }
-
-  .content-cover {
-    width: 708px;
-    height: 442px;
-  }
-}
-
-@media screen and (min-aspect-ratio: 8/5) { // have to change by max-height
+@media (max-height: 700px) {
   h1 {
     margin-bottom: 30px;
   }
 
+  .content-description-principal {
+    gap: 20px;
+  }
+
   .content-description {
-    height: 442px; //have to change this value by a smaller height
+    height: 19.51em;
   }
 
   .content-cover {
-    width: 708px; //have to change this value by a smaller width
-    height: 442px; //have to change this value by a smaller height
+    width: 31.25em;
+    height: 19.51em;
   }
 }
+
+@media (min-height: 700px) {
+  h1 {
+    margin-bottom: 70px;
+  }
+
+  .content-description-principal {
+    gap: 40px;
+  }
+
+  .content-description {
+    height: 27.625em;
+  }
+
+  .content-cover {
+    width: 44.25em;
+    height: 27.625em;
+  }
+}
+
 
 @keyframes slide-in-text {
   0% {

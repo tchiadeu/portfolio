@@ -11,18 +11,27 @@
 }
 
 .container-full-height {
-  height: 200vh;
+  height: 100vh;
   animation: slide-in-Y 1s ease-in-out;
-}
-
-.container-padding-y {
-  padding-top: 200px; // have to do media query
-  padding-bottom: 200px; // have to do media query
 }
 
 @media (min-width: 576px) {
   .container-content, .container-contact {
     margin: 0 7vw;
+  }
+}
+
+@media (max-height: 700px) {
+  .container-padding-y {
+    padding-top: 145px;
+    padding-bottom: 145px;
+  }
+}
+
+@media (min-height: 700px) {
+  .container-padding-y {
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 

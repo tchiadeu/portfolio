@@ -71,14 +71,30 @@ p {
   font-size: 0.75em;
 }
 
-.spacing-large-line {
-  line-height: 1.9;
-}
-
 .spacing-little-line {
   line-height: 1.5;
 }
 
 .text-custom {
   font-size: 8.3vw;
+}
+
+@media (max-height: 700px) {
+  .text-responsive {
+    font-size: 1.125em;
+  }
+
+  .spacing-large-line {
+    line-height: 1.7;
+  }
+}
+
+@media (min-height: 700px) {
+  .text-responsive {
+    font-size: 1.25em;
+  }
+
+  .spacing-large-line {
+    line-height: 1.9;
+  }
 }

@@ -4,22 +4,17 @@
   p {
     margin-bottom: 20px;
   }
-
-  h2 {
-    margin-bottom: 100px;
-  }
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-row-gap: 80px;
   grid-column-gap: 1.6vw;
+  grid-row-gap: 80px;
 
   .project-card {
     .project-cover {
       width: 100%;
-      aspect-ratio: 1/1;
       position: relative;
 
       .project-image {
@@ -54,10 +49,10 @@
     }
 
     .project-infos {
-      margin-top: 50px;
       width: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
       h5 {
         margin-bottom: 10px;
@@ -84,6 +79,34 @@
         }
       }
     }
+  }
+}
+
+@media (max-height: 700px) {
+  h2 {
+    margin-bottom: 80px;
+  }
+
+  .project-cover {
+    aspect-ratio: 1.2/1;
+  }
+
+  .project-infos {
+    margin-top: 30px;
+  }
+}
+
+@media (min-height: 700px) {
+  h2 {
+    margin-bottom: 100px;
+  }
+
+  .project-cover {
+    aspect-ratio: 1/1;
+  }
+
+  .project-infos {
+    margin-top: 50px;
   }
 }
 

@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = [ "appear" ]
 
   connect() {
-    const ratio = 0.5
+    const ratio = 0.3
     const options = {
       root: null,
       rootMargin: "0px",
