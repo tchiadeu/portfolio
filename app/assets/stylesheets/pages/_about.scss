@@ -14,10 +14,15 @@
   flex-direction: row;
   justify-content: space-between;
 
+  p:first-of-type {
+    margin-top: 15px;
+  }
+
   .disclaimer-list {
     h3 {
       text-transform: uppercase;
     }
+
     .disclaimer-description {
       display: flex;
       flex-direction: row;
