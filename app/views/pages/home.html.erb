@@ -22,10 +22,12 @@
               <p class='text-responsive text-regular text-grey spacing-large-line'>👋 Bonjour,
               <br>Je suis Kévin Tchiadeu, <%= @age %> ans, développeur fullstack freelance basé à Rennes.
               Je vous propose mes services dans la conception de vos plateformes digitales.</p>
-              <div class="button button-black button-home">
-                <%= image_tag 'icones/mail.svg' %>
-                <p class='text-white'>Contactez-moi</p>
-              </div>
+              <a href="mailto:kevin.tchiadeu@gmail.com">
+                <div class="button button-black button-home">
+                  <%= image_tag 'icones/mail.svg' %>
+                  <p class='text-white'>Contactez-moi</p>
+                </div>
+              </a>
             </div>
             <div data-action='click->scroll#scrollToAbout' class="button">
               <%= image_tag 'icones/arrow.svg', class: 'arrow-down' %>
