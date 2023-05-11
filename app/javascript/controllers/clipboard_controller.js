@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="clipboard"
 export default class extends Controller {
-  static targets = [ "mail", "text" ]
+  static targets = [ "mail", "text", "button" ]
 
   connect() {
   }
@@ -16,6 +16,7 @@ export default class extends Controller {
     document.execCommand("copy");
     document.body.removeChild(element);
     this.textTarget.innerText = "Copié";
+    this.buttonTarget.style.border = 'solid 1px #999999';
   }
 
   resetText() {

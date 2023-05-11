@@ -4,10 +4,14 @@
     <a href="mailto:kevin.tchiadeu@gmail.com" target='_blank'>
       <h1 data-appear-target='appear' data-clipboard-target='mail' class='text-white hidden-bottom'>kevin.tchiadeu<br>@gmail.com</h1>
     </a>
-    <div data-appear-target='appear' data-action='click->clipboard#copy mouseleave->clipboard#resetText'
+    <div data-appear-target='appear'
+         data-clipboard-target='button'
+         data-action='click->clipboard#copy mouseleave->clipboard#resetText'
          class="button button-black button-copy hidden-bottom">
-      <%= image_tag 'icones/copy.svg' %>
-      <p data-clipboard-target='text' class='text-white'>Copier</p>
+      <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.90445 0.976074H12V10.0716H2.90445V0.976074ZM0 3.92857H2.4V10.5767H9.09593V13.0241H0.000386267V3.92857H0Z"/>
+      </svg>
+      <p data-clipboard-target='text' class='text-medium'>Copier</p>
     </div>
   </div>
 </div>

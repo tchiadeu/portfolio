@@ -8,13 +8,16 @@
 .button-black {
   padding: 20px;
   background-color: black;
-  color: white;
   border: solid 1px white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+
+  p {
+    color: white;
+  }
 }
 
 .button-home {
@@ -25,4 +28,20 @@
 
 .button-copy {
   width: 4.375em;
+
+  svg {
+    fill: white;
+  }
+
+  &:hover {
+    background-color: white;
+
+    svg {
+      fill: black;
+    }
+
+    p {
+      color: black;
+    }
+  }
 }
