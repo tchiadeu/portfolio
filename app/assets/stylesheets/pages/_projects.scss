@@ -61,8 +61,18 @@
         &::after {
           opacity: 0;
           content: 'Découvrir';
-          margin-left: 10px;
           animation: show-content 500ms ease-in-out forwards;
+        }
+      }
+
+      &:not(:hover) {
+        animation: undiscover 500ms ease-in-out forwards;
+
+        &::after {
+          opacity: 1;
+          margin-left: 10px;
+          content: 'Découvrir';
+          animation: unshow-content 500ms ease-in-out forwards;
         }
       }
     }
@@ -180,7 +190,28 @@
 @keyframes show-content {
   0% {
     opacity: 0;
+    margin-left: 0;
   } 100% {
     opacity: 1;
+    margin-left: 10px;
+  }
+}
+
+@keyframes undiscover {
+  0% {
+    width: 120px;
+  } 100% {
+    width: 40px;
+  }
+}
+
+@keyframes unshow-content {
+  0% {
+    opacity: 1;
+    content: 'Découvrir';
+  } 100% {
+    opacity: 0;
+    content: '';
+    margin-left: 0;
   }
 }
