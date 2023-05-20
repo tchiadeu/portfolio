@@ -4,8 +4,6 @@
   justify-content: space-between;
   align-items: center;
   opacity: 0;
-  animation: slide-in-navbar 500ms ease-in-out forwards;
-  animation-delay: 3500ms;
 }
 
 .icone-cross {
@@ -13,6 +11,11 @@
 }
 
 @media (min-width: 576px) {
+  .navbar {
+    animation: slide-in-navbar 500ms ease-in-out forwards;
+    animation-delay: 3500ms;
+  }
+
   .navbar-options {
     display: flex;
     flex-direction: row;
@@ -26,6 +29,11 @@
 }
 
 @media (max-width: 576px) {
+  .navbar {
+    animation: slide-in-navbar 500ms ease-in-out forwards;
+    animation-delay: 3000ms;
+  }
+
   .navbar-options {
     display: none;
   }
