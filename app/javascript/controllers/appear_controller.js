@@ -13,11 +13,15 @@ export default class extends Controller {
     }
 
     const handleIntersect = (entries, observer) => {
-      entries.forEach((entry) => {
+      entries.forEach((entry, index) => {
         if (entry.intersectionRatio > ratio) {
-          setTimeout(() => {
+          if (index < 2 || index === 11) {
+            setTimeout(() => {
+              entry.target.classList.add("reveal")
+            }, 1000);
+          } else {
             entry.target.classList.add("reveal")
-          }, 1000);
+          }
           observer.unobserve(entry.target)
         }
       })
