@@ -1,0 +1,37 @@
+.filter-black, .filter-white {
+  width: 100vw;
+}
+
+.filter-black {
+  background-color: black;
+}
+
+.filter-white {
+  background-color: white;
+}
+
+.change-to-black {
+  animation: white-to-black 1s ease-in-out forwards;
+}
+
+.change-to-white {
+  animation: black-to-white 1s ease-in-out forwards;
+}
+
+@keyframes black-to-white {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes white-to-black {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: black;
+  }
+}

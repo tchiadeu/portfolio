@@ -1,16 +1,16 @@
 <div data-controller='loading'>
   <%= render 'loading_page' %>
-  <div data-controller='scroll appear smartphone' data-loading-target='landing' class='landing'>
+  <div data-controller='scroll appear filter smartphone' data-loading-target='landing' class='landing'>
     <div data-smartphone-target='background' class="container-white container-full-height">
       <%= render 'navbar' %>
       <div data-smartphone-target='smartphoneOptions' class='smartphone-options'>
-        <div data-action='click->smartphone#scrollToAbout' class='button'>
+        <div data-action='click->smartphone#scrollTo' data-category="about" class='button'>
           <p class='text-large text-grey text-regular'>À propos</p>
         </div>
-        <div data-action='click->smartphone#scrollToProjects' class='button'>
+        <div data-action='click->smartphone#scrollTo' data-category="projects" class='button'>
           <p class='text-large text-grey text-regular'>Projets</p>
         </div>
-        <div data-action='click->smartphone#scrollToContact' class='button'>
+        <div data-action='click->smartphone#scrollTo' data-category="contact" class='button'>
           <p class='text-large text-grey text-regular'>Contact</p>
         </div>
       </div>
