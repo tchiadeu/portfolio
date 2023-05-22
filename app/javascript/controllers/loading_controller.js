@@ -27,8 +27,12 @@ export default class extends Controller {
     }, 3000);
 
     setTimeout(() => {
+      this.loadingPageTarget.classList.add("slide-out")
+    }, 4500);
+
+    setTimeout(() => {
       this.loadingPageTarget.style.display = "none";
       this.landingTarget.style.display = "block";
-    }, 4500);
+    }, 5500);
   }
 }

@@ -1,13 +1,5 @@
-.filter-black, .filter-white {
-  width: 100%;
-}
-
-.filter-black {
-  background-color: black;
-}
-
-.filter-white {
-  background-color: white;
+.slide-out {
+  animation: slide-in-Y 1s ease-in-out forwards;
 }
 
 .change-to-black {
@@ -33,5 +25,16 @@
   }
   100% {
     background-color: black;
+  }
+}
+
+@keyframes slide-in-Y {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  } 100% {
+    transform: translateY(-100%);
+    display: none !important;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }

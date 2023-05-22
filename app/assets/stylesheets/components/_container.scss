@@ -1,18 +1,9 @@
-.container-white, .container-basic {
+.container-basic {
   padding: 0 9.3vw;
 }
 
-.container-white {
-  background-color: white;
-}
-
-.container-full-height {
-  animation: slide-in-Y 1s ease-in-out;
-}
-
-
 @media (max-width: 576px) {
-  .container-white, .container-black {
+  .container-basic {
     overflow-x: hidden;
   }
 
@@ -51,15 +42,5 @@
 
   .container-full-height {
     padding-bottom: 12.5em;
-  }
-}
-
-@keyframes slide-in-Y {
-  0% {
-    transform: translateY(100%);
-    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  } 100% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
