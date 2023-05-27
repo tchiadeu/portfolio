@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = [ "category" ]
 
   connect() {
-    const ratio = 0.1
+    const ratio = 0.2
     const options = {
       root: null,
       rootMargin: "0px",
@@ -14,21 +14,27 @@ export default class extends Controller {
 
     const body = document.body
 
+    let firstCategoryAppear = true
+
     const handleIntersect = (entries) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio > ratio) {
-          if (body.classList.contains("change-to-black")) {
-            body.classList.remove("change-to-black")
-            body.classList.add("change-to-white")
-          } else if (body.classList.contains("change-to-white")) {
-            body.classList.remove("change-to-white")
-            body.classList.add("change-to-black")
-          } else if (! entry.target.classList.contains("container-full-height")){
-            body.classList.add("change-to-black")
+        const targetIndex = this.categoryTargets.findIndex((target) => target == entry.target)
+        if (entry.intersectionRatio > ratio && targetIndex !== -1) {
+          if (firstCategoryAppear) {
+            firstCategoryAppear = false
+          } else {
+            if (targetIndex % 2 === 0) {
+              body.classList.remove("change-to-black")
+              body.classList.add("change-to-white")
+            } else {
+              body.classList.add("change-to-black")
+              body.classList.remove("change-to-white")
+            }
           }
         }
       })
     }
+
     const observer = new IntersectionObserver(handleIntersect, options)
     this.categoryTargets.forEach(target => {
       observer.observe(target)
