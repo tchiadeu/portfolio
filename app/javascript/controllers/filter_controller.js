@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = [ "category" ]
 
   connect() {
-    const ratio = 0.2
+    const ratio = 0.05
     const options = {
       root: null,
       rootMargin: "0px",

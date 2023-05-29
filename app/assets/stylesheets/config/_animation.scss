@@ -1,10 +1,10 @@
 @media (min-width: 576px) {
-  .hidden-bottom {
+  [class*="hidden-"] {
     opacity: 0;
     transform: translateY(50%);
   }
 
-  .hidden-left {
+  .left-hidden {
     opacity: 0;
     transform: translateX(-50%);
   }
@@ -12,6 +12,11 @@
   .reveal {
     opacity: 1;
     transform: translate(0);
+    transition: 1s cubic-bezier(0.5, 0, 0, 1);
+  }
+
+  .unreveal {
+    opacity: 0;
     transition: 1s cubic-bezier(0.5, 0, 0, 1);
   }
 }

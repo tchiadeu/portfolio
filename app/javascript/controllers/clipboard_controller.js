@@ -8,7 +8,7 @@ export default class extends Controller {
   }
 
   copy() {
-    const mail = this.mailTarget.innerText.toLowerCase();
+    const mail = this.mailTarget.textContent.toLowerCase();
     const element = document.createElement("textarea");
     document.body.appendChild(element);
     element.value = mail;
