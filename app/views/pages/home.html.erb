@@ -1,8 +1,7 @@
 <div data-controller='loading'>
   <%= render 'loading_page' %>
   <div data-controller='scroll appear smartphone' data-loading-target='landing' class='landing'>
-    <div data-smartphone-target='background' class="container-basic container-full-height"
-         data-appear-target="category">
+    <div data-smartphone-target='background' class="container-basic container-full-height">
       <%= render 'navbar' %>
       <div data-smartphone-target='smartphoneOptions' class='smartphone-options'>
         <div data-action='click->smartphone#scrollTo' data-category="about" class='button'>
@@ -16,28 +15,34 @@
         </div>
       </div>
       <div data-smartphone-target='content' class="container-content">
-        <h1>développeur <br>fullstack</h1>
+        <h1 data-appear-target='content' class='slide-in-title'>
+          développeur <br>fullstack
+        </h1>
         <div class='content-infos'>
           <div class='content-description'>
-            <div class='content-description-principal'>
-              <p class='text-responsive text-regular text-grey spacing-large-line'>👋 Bonjour,
-              <br>Je suis Kévin Tchiadeu, <%= @age %> ans, développeur fullstack freelance basé à Rennes.
-              Je vous propose mes services dans la conception de vos plateformes digitales.</p>
+            <div data-appear-target='content' class='content-description-principal slide-in-description'>
+              <p class='text-responsive text-regular text-grey spacing-large-line'>
+                👋 Bonjour,
+                <br>Je suis Kévin Tchiadeu, <%= @age %> ans, développeur fullstack freelance basé à Rennes.
+                Je vous propose mes services dans la conception de vos plateformes digitales.
+              </p>
               <a href="mailto:kevin.tchiadeu@gmail.com">
-                <div class="button button-black button-home">
+                <div data-appear-target='content' class="button button-black button-home slide-in-button">
                   <%= image_tag 'icones/mail.svg' %>
                   <p class='text-medium'>Contactez-moi</p>
                 </div>
               </a>
             </div>
             <div data-action='click->scroll#scrollToAbout' class="button">
-              <%= image_tag 'icones/arrow.svg', class: 'arrow-down' %>
+              <%= image_tag 'icones/arrow.svg', class: 'arrow-down slide-in-arrow',
+                  data: {appear_target: "content"} %>
             </div>
           </div>
           <div class="content-cover-position">
             <div class="content-cover">
-              <div class="content-cover-filter"></div>
-              <%= image_tag 'developpeur_web.jpg', alt: 'developpeur web', class: 'content-image' %>
+              <div class="content-cover-filter cover-reveal"></div>
+              <%= image_tag 'developpeur_web.jpg', alt: 'developpeur web', class: 'content-image image-reveal',
+                  data: {appear_target: 'content'} %>
             </div>
           </div>
         </div>

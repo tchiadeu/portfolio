@@ -1,22 +1,116 @@
-@media (min-width: 576px) {
-  [class*="hidden-"] {
+.slide-in-navbar {
+  animation: slide-in-navbar 500ms ease-in-out forwards;
+  animation-delay: 2300ms;
+}
+
+.slide-in-title {
+  animation: slide-in-text 500ms ease-in-out forwards;
+}
+
+.slide-in-description {
+  animation: slide-in-text 500ms ease-in-out forwards;
+  animation-delay: 400ms;
+}
+
+.slide-in-button {
+  animation: slide-in-text 500ms ease-in-out forwards;
+  animation-delay: 900ms;
+}
+
+.slide-in-arrow {
+  animation: slide-in-text 500ms ease-in-out forwards, rebound 1000ms cubic-bezier(0.4, 0, 1, 1) infinite 500ms;
+  animation-delay: 2300ms;
+}
+
+.cover-reveal {
+  animation: filter-disappear 1000ms ease-in-out forwards;
+  animation-delay: 1350ms;
+}
+
+.image-reveal {
+  animation: image-appear 1000ms ease-in-out forwards;
+  animation-delay: 1350ms;
+}
+
+[class*="hidden-"] {
+  opacity: 0;
+  transform: translateY(50%);
+}
+
+.left-hidden {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+.reveal {
+  opacity: 1 !important;
+  visibility: visible !important;
+  scale: 1 !important;
+  transform: translate(0);
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.unreveal {
+  opacity: 0 !important;
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+}
+
+@keyframes slide-in-navbar {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  } 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-text {
+  0% {
     opacity: 0;
     transform: translateY(50%);
-  }
-
-  .left-hidden {
-    opacity: 0;
-    transform: translateX(-50%);
-  }
-
-  .reveal {
+    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  } 100% {
     opacity: 1;
-    transform: translate(0);
-    transition: 1s cubic-bezier(0.5, 0, 0, 1);
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
 
-  .unreveal {
-    opacity: 0;
-    transition: 1s cubic-bezier(0.5, 0, 0, 1);
+@keyframes filter-disappear {
+  0% {
+    transform: translateX(0);
+  } 100% {
+    transform: translateX(-100%);
+    display: none;
+  }
+}
+
+@keyframes image-appear {
+  0% {
+    visibility: visible;
+    scale: 1.2;
+  } 100% {
+    visibility: visible;
+    scale: 1;
+  }
+}
+
+@keyframes rebound {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  } 25% {
+    opacity: 1;
+    transform: translateY(-5px);
+    } 50% {
+    opacity: 1;
+    transform: translateY(0);
+  } 75% {
+    opacity: 1;
+    transform: translateY(5px);
+  } 100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
