@@ -2,9 +2,13 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="appear"
 export default class extends Controller {
-  static targets = [ "aboutAppear", "contactAppear", "projectAppear", "content" ]
+  static targets = [ "about", "contact", "project", "content" ]
 
   connect() {
+    if (window.innerWidth <= 576) {
+      return
+    }
+
     const body = document.body
     let firstTime = true
 
@@ -56,9 +60,9 @@ export default class extends Controller {
 
     const aboutHandleIntersect = (entries) => {
       entries.forEach((entry) => {
-        const targetIndex = this.aboutAppearTargets.findIndex((target) => target == entry.target)
+        const targetIndex = this.aboutTargets.findIndex((target) => target == entry.target)
         if ((targetIndex === 0
-            || targetIndex === this.aboutAppearTargets.length - 1)
+            || targetIndex === this.aboutTargets.length - 1)
             && entry.intersectionRatio > ratio) {
           body.classList.remove("change-to-white")
           body.classList.add("change-to-black")
@@ -80,10 +84,10 @@ export default class extends Controller {
 
     const projectHandleIntersect = (entries) => {
       entries.forEach((entry) => {
-        const targetIndex = this.projectAppearTargets.findIndex((target) => target == entry.target)
+        const targetIndex = this.projectTargets.findIndex((target) => target == entry.target)
         if ((targetIndex === 0
-            || targetIndex === this.projectAppearTargets.length - 1
-            || targetIndex === this.projectAppearTargets.length - 2)
+            || targetIndex === this.projectTargets.length - 1
+            || targetIndex === this.projectTargets.length - 2)
             && entry.intersectionRatio > ratio) {
           body.classList.remove("change-to-black")
           body.classList.add("change-to-white")
@@ -105,9 +109,9 @@ export default class extends Controller {
 
     const contactHandleIntersect = (entries) => {
       entries.forEach((entry) => {
-        const targetIndex = this.contactAppearTargets.findIndex((target) => target == entry.target)
+        const targetIndex = this.contactTargets.findIndex((target) => target == entry.target)
         if ((targetIndex === 0
-            || targetIndex === this.contactAppearTargets.length - 1)
+            || targetIndex === this.contactTargets.length - 1)
             && entry.intersectionRatio > ratio) {
           body.classList.remove("change-to-white")
           body.classList.add("change-to-black")
@@ -133,17 +137,17 @@ export default class extends Controller {
     })
 
     const aboutObserver = new IntersectionObserver(aboutHandleIntersect, options)
-    this.aboutAppearTargets.forEach(target => {
+    this.aboutTargets.forEach(target => {
       aboutObserver.observe(target)
     })
 
     const projectObserver = new IntersectionObserver(projectHandleIntersect, options)
-    this.projectAppearTargets.forEach(target => {
+    this.projectTargets.forEach(target => {
       projectObserver.observe(target)
     })
 
     const contactObserver = new IntersectionObserver(contactHandleIntersect, options)
-    this.contactAppearTargets.forEach(target => {
+    this.contactTargets.forEach(target => {
       contactObserver.observe(target)
     })
   }

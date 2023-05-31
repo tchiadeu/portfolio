@@ -15,34 +15,36 @@
         </div>
       </div>
       <div data-smartphone-target='content' class="container-content">
-        <h1 data-appear-target='content' class='slide-in-title'>
+        <h1 data-appear-target='content' class='slide-in-title slide-in-title-mobile'>
           développeur <br>fullstack
         </h1>
         <div class='content-infos'>
           <div class='content-description'>
-            <div data-appear-target='content' class='content-description-principal slide-in-description'>
+            <div data-appear-target='content'
+                 class='content-description-principal slide-in-description slide-in-description-mobile'>
               <p class='text-responsive text-regular text-grey spacing-large-line'>
                 👋 Bonjour,
                 <br>Je suis Kévin Tchiadeu, <%= @age %> ans, développeur fullstack freelance basé à Rennes.
                 Je vous propose mes services dans la conception de vos plateformes digitales.
               </p>
               <a href="mailto:kevin.tchiadeu@gmail.com">
-                <div data-appear-target='content' class="button button-black button-home slide-in-button">
+                <div data-appear-target='content'
+                     class="button button-black button-home slide-in-button slide-in-button-mobile">
                   <%= image_tag 'icones/mail.svg' %>
                   <p class='text-medium'>Contactez-moi</p>
                 </div>
               </a>
             </div>
             <div data-action='click->scroll#scrollToAbout' class="button">
-              <%= image_tag 'icones/arrow.svg', class: 'arrow-down slide-in-arrow',
+              <%= image_tag 'icones/arrow.svg', class: 'arrow-down slide-in-arrow slide-in-arrow-mobile',
                   data: {appear_target: "content"} %>
             </div>
           </div>
           <div class="content-cover-position">
             <div class="content-cover">
-              <div class="content-cover-filter cover-reveal"></div>
-              <%= image_tag 'developpeur_web.jpg', alt: 'developpeur web', class: 'content-image image-reveal',
-                  data: {appear_target: 'content'} %>
+              <div class="content-cover-filter cover-reveal cover-reveal-mobile"></div>
+              <%= image_tag 'developpeur_web.jpg', class: 'content-image image-reveal image-reveal-mobile',
+                  alt: 'developpeur web', data: {appear_target: 'content'} %>
             </div>
           </div>
         </div>
