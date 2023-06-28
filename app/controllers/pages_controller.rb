@@ -6,8 +6,8 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @clients = Client.all
-    @bills = Bill.all
+    @clients = Client.where(admin: current_admin)
+    @bills = Bill.where(admin: current_admin)
   end
 
   def about
