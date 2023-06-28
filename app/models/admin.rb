@@ -6,4 +6,6 @@ class Admin < ApplicationRecord
 
   has_many :clients
   has_many :bills, through: :clients
+
+  validates :email, presence: true, uniqueness: true, inclusion: { in: ['contact@kevintchiadeu.com'], message: "L'email n'est pas valide" }
 end
