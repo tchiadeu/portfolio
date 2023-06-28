@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_28_091407) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_28_092102) do
   create_table "bills", force: :cascade do |t|
     t.integer "number"
     t.float "total_amount"
@@ -19,6 +19,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_091407) do
     t.string "unity"
     t.float "quantity"
     t.boolean "payed", default: false
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "post_code"
+    t.string "city"
+    t.integer "siret_number"
+    t.string "tva_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "phone_number"
+    t.string "email"
   end
 
 end
