@@ -72,3 +72,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# Users
+gem "devise"
+
+# PDF Generation
+gem "wicked_pdf"
