@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_28_092102) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_28_092334) do
   create_table "bills", force: :cascade do |t|
     t.integer "number"
     t.float "total_amount"
@@ -19,6 +19,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_092102) do
     t.string "unity"
     t.float "quantity"
     t.boolean "payed", default: false
+    t.integer "client_id", null: false
+    t.index ["client_id"], name: "index_bills_on_client_id"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -34,4 +36,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_092102) do
     t.string "email"
   end
 
+  add_foreign_key "bills", "clients"
 end
