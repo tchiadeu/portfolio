@@ -1,5 +1,5 @@
 class BillsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_admin!
 
   def show
     @bill = Bill.find(params[:id])

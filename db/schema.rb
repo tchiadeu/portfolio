@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_28_104913) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_28_105751) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -46,7 +46,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_104913) do
     t.datetime "updated_at", null: false
     t.integer "phone_number"
     t.string "email"
+    t.integer "admin_id", null: false
+    t.index ["admin_id"], name: "index_clients_on_admin_id"
   end
 
   add_foreign_key "bills", "clients"
+  add_foreign_key "clients", "admins"
 end
