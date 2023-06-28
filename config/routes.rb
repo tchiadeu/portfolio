@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'dashboard', to: 'pages#dashboard'
   get 'about', to: 'pages#about'
-  resources 'bill'
-  resources 'client'
+  resources 'bills', only: %i[show new create edit update destroy]
+  resources 'clients', only: %i[show new create edit update destroy]
 end

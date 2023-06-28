@@ -1,18 +1,18 @@
 class BillsController < ApplicationController
   before_action :authenticate_admin!
 
-  def show
-    @bill = Bill.find(params[:id])
-    respond_to do |format|
-      format.html
-      format.pdf do
-        render pdf: "F-#{Date.today.strftime('%Y%m%d')}-#{Bill.number}",
-               template: 'bills/show',
-               formats: [:html],
-               encoding: 'utf8'
-      end
-    end
-  end
+  # def show
+  #   @bill = Bill.find(params[:id])
+  #   respond_to do |format|
+  #     format.html
+  #     format.pdf do
+  #       render pdf: "F-#{Date.today.strftime('%Y%m%d')}-#{Bill.number}",
+  #              template: 'bills/show',
+  #              formats: [:html],
+  #              encoding: 'utf8'
+  #     end
+  #   end
+  # end
 
   def new
     @bill = Bill.new
@@ -20,23 +20,27 @@ class BillsController < ApplicationController
 
   def create
     @bill = Bill.new(bill_params)
-    @bill.save
-    redirect_to @bill
+    @bill.admin = current_admin
+    if @bill.save
+      redirect_to @bill
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
-  def edit
-    @bill = Bill.find(params[:id])
-  end
+  # def edit
+  #   @bill = Bill.find(params[:id])
+  # end
 
-  def update
-    @bill = Bill.find(params[:id])
-    @bill.update(bill_params)
-  end
+  # def update
+  #   @bill = Bill.find(params[:id])
+  #   @bill.update(bill_params)
+  # end
 
-  def destroy
-    @bill = Bill.find(params[:id])
-    @bill.destroy
-  end
+  # def destroy
+  #   @bill = Bill.find(params[:id])
+  #   @bill.destroy
+  # end
 
   private
 
