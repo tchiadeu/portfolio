@@ -1,4 +1,6 @@
 class BillsController < ApplicationController
+  before_action :authenticate_user!
+
   def show
     @bill = Bill.find(params[:id])
     respond_to do |format|
