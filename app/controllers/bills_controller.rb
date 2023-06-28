@@ -43,6 +43,6 @@ class BillsController < ApplicationController
   private
 
   def bill_params
-    params.require(:bill).permit(:number, :total_amount)
+    params.require(:bill).permit(:number, :quantity, :unity, :payed, :total_amount)
   end
 end
