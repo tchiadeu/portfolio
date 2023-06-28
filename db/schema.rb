@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_28_105751) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_28_150138) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -32,6 +32,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_105751) do
     t.float "quantity"
     t.boolean "payed", default: false
     t.integer "client_id", null: false
+    t.integer "admin_id", null: false
+    t.index ["admin_id"], name: "index_bills_on_admin_id"
     t.index ["client_id"], name: "index_bills_on_client_id"
   end
 
@@ -50,6 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_105751) do
     t.index ["admin_id"], name: "index_clients_on_admin_id"
   end
 
+  add_foreign_key "bills", "admins"
   add_foreign_key "bills", "clients"
   add_foreign_key "clients", "admins"
 end
