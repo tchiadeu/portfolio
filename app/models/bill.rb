@@ -6,7 +6,7 @@ class Bill < ApplicationRecord
 
   validates :client, presence: true
   validates :unity, presence: true, inclusion: { in: UNITY }
-  validates :quantity, presence: true, numericality: { only_integer: false }
+  validates :quantity, presence: true
 
   accepts_nested_attributes_for :client
 end
