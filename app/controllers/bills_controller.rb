@@ -22,11 +22,17 @@ class BillsController < ApplicationController
   def create
     @bill = Bill.new(bill_params)
     @bill.admin = current_admin
-    @bill.emission_date = Date.today
-    @bill.due_date = Date.today + 30
     @bill.month = Date.today.strftime('%B')
     @bill.year = Date.today.year
     @bill.number = Bill.where(year: @bill.year).count + 1
+    @bill.emission_date = Date.today
+    @bill.due_date = Date.today + 30
+
+    item_params = params[:bill][:items_attributes]
+    item_params.each do |_index, item_param|
+      @bill.items.build(item_param)
+    end
+
     client = Client.new(
       name: params[:bill][:client_attributes][:name],
       address: params[:bill][:client_attributes][:address],
@@ -40,6 +46,7 @@ class BillsController < ApplicationController
     client.admin = current_admin
     client.save
     @bill.client = client
+
     if @bill.save
       redirect_to dashboard_path
     else
@@ -47,26 +54,27 @@ class BillsController < ApplicationController
     end
   end
 
-  def edit
-    @bill = Bill.find(params[:id])
-  end
+  # def edit
+  #   @bill = Bill.find(params[:id])
+  # end
 
-  def update
-    @bill = Bill.find(params[:id])
-    @bill.update(bill_params)
-  end
+  # def update
+  #   @bill = Bill.find(params[:id])
+  #   @bill.update(bill_params)
+  # end
 
-  def destroy
-    @bill = Bill.find(params[:id])
-    @bill.destroy
-  end
+  # def destroy
+  #   @bill = Bill.find(params[:id])
+  #   @bill.destroy
+  # end
 
   private
 
   def bill_params
     params.require(:bill).permit(
-      :number, :quantity, :unity, :payed, :total_amount, :unit_price, :year, :emission_date, :due_date, :month,
-      client_attributes: %i[name address post_code city siret_number tva_number email phone_number]
+      :number, :payed, :total_amount, :year, :emission_date, :due_date, :month,
+      client_attributes: %i[name address post_code city siret_number tva_number email phone_number],
+      items_attributes: %i[name description unity quantity unit_price total_price]
     )
   end
 end

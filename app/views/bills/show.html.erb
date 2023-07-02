@@ -41,7 +41,7 @@
       <p>Prix Unitaire</p>
       <p>Total</p>
     </div>
-    <%= @bill.items_number.each |item| do %>
+    <%= @bill.items.each |item| do %>
       <div class="bill-row">
         <p><%= item.name %></p>
         <p><%= item.unity %></p>
