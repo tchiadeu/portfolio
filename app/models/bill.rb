@@ -1,12 +1,8 @@
 class Bill < ApplicationRecord
-  UNITY = %w[heures jours].freeze
-
   belongs_to :client
   belongs_to :admin
-
-  validates :client, presence: true
-  validates :unity, presence: true, inclusion: { in: UNITY }
-  validates :quantity, presence: true
+  has_many :items, dependent: :destroy
 
   accepts_nested_attributes_for :client
+  accepts_nested_attributes_for :items
 end
