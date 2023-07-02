@@ -1,0 +1,55 @@
+<div class="container-bill">
+
+  <h1>Facture</h1>
+
+  <div>
+    <div class="bill-informations">
+      <p>Numéro de facture</p>
+      <p><%= "F-2023-#{if @bill.number < 10 ? "0#{@bill.number.to_s}" : @bill.number.to_s}" %></p>
+    </div>
+    <div class="bill-informations">
+      <p>Date d'émission</p>
+      <p><%= @bill.emission_date %></p>
+    </div>
+    <div class="bill-informations">
+      <p>Date d'échéance</p>
+      <p><%= @bill.due_date %></p>
+    </div>
+  </div>
+
+  <div class="bill-entities">
+    <div>
+      <p><strong><%= @bill.admin.name %></strong></p>
+      <p><%= @bill.admin.address %></p>
+      <p><%= "#{@bill.admin.post_code}, #{@bill.admin.city}" %></p>
+      <p><%= @bill.admin.siret_number %></p>
+      <p><%= @bill.admin.email %></p>
+    </div>
+    <div>
+      <p><strong><%= @bill.client.name %></strong></p>
+      <p><%= @bill.client.address %></p>
+      <p><%= "#{@bill.client.post_code}, #{@bill.client.city}" %></p>
+      <p><%= @bill.client.siret_number %></p>
+    </div>
+  </div>
+
+  <div class="bill-designations">
+    <div class="bill-global-row">
+      <p>Items</p>
+      <p>Unité</p>
+      <p>Quantité</p>
+      <p>Prix Unitaire</p>
+      <p>Total</p>
+    </div>
+    <%= @bill.items_number.each |item| do %>
+      <div class="bill-row">
+        <p><%= item.name %></p>
+        <p><%= item.unity %></p>
+        <p><%= item.quantity %></p>
+        <p><%= item.unit_price %></p>
+        <p><%= item.total_price %></p>
+      </div>
+    <% end %>
+  </div>
+
+</div>

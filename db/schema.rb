@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_28_152329) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_02_084647) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -19,6 +19,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_152329) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.integer "siret_number"
+    t.string "tva_number"
+    t.string "address"
+    t.string "post_code"
+    t.string "city"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
@@ -29,12 +35,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_152329) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "unity"
-    t.float "quantity"
+    t.decimal "quantity", precision: 2, scale: 2
     t.boolean "payed", default: false
     t.integer "client_id", null: false
     t.integer "admin_id", null: false
-    t.float "unit_price"
+    t.decimal "unit_price", precision: 10, scale: 2
     t.integer "year"
+    t.date "emission_date"
+    t.date "due_date"
+    t.string "month"
+    t.integer "items_number"
     t.index ["admin_id"], name: "index_bills_on_admin_id"
     t.index ["client_id"], name: "index_bills_on_client_id"
   end

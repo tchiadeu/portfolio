@@ -22,16 +22,21 @@ class BillsController < ApplicationController
   def create
     @bill = Bill.new(bill_params)
     @bill.admin = current_admin
+    @bill.emission_date = Date.today
+    @bill.due_date = Date.today + 30
+    @bill.month = Date.today.strftime('%B')
     @bill.year = Date.today.year
     @bill.number = Bill.where(year: @bill.year).count + 1
-    client = Client.new(name: params[:bill][:client_attributes][:name],
-                        address: params[:bill][:client_attributes][:address],
-                        post_code: params[:bill][:client_attributes][:post_code],
-                        city: params[:bill][:client_attributes][:city],
-                        siret_number: params[:bill][:client_attributes][:siret_number],
-                        tva_number: params[:bill][:client_attributes][:tva_number],
-                        email: params[:bill][:client_attributes][:email],
-                        phone_number: params[:bill][:client_attributes][:phone_number])
+    client = Client.new(
+      name: params[:bill][:client_attributes][:name],
+      address: params[:bill][:client_attributes][:address],
+      post_code: params[:bill][:client_attributes][:post_code],
+      city: params[:bill][:client_attributes][:city],
+      siret_number: params[:bill][:client_attributes][:siret_number],
+      tva_number: params[:bill][:client_attributes][:tva_number],
+      email: params[:bill][:client_attributes][:email],
+      phone_number: params[:bill][:client_attributes][:phone_number]
+    )
     client.admin = current_admin
     client.save
     @bill.client = client
@@ -60,7 +65,7 @@ class BillsController < ApplicationController
 
   def bill_params
     params.require(:bill).permit(
-      :number, :quantity, :unity, :payed, :total_amount, :unit_price, :year,
+      :number, :quantity, :unity, :payed, :total_amount, :unit_price, :year, :emission_date, :due_date, :month,
       client_attributes: %i[name address post_code city siret_number tva_number email phone_number]
     )
   end
