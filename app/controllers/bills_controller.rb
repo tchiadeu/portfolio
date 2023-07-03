@@ -17,21 +17,44 @@ class BillsController < ApplicationController
   def new
     @bill = Bill.new
     @bill.build_client
+    @bill.items.build
   end
 
   def create
     @bill = Bill.new(bill_params)
     @bill.admin = current_admin
-    @bill.month = Date.today.strftime('%B')
+    @bill.month = Date.today.month
     @bill.year = Date.today.year
-    @bill.number = Bill.where(year: @bill.year).count + 1
+    if Bill.where(year: @bill.year) < 10
+      @bill.number = "0#{Bill.where(year: @bill.year).count + 1}"
+    else
+      @bill.number = (Bill.where(year: @bill.year).count + 1).to_s
+    end
     @bill.emission_date = Date.today
     @bill.due_date = Date.today + 30
 
-    item_params = params[:bill][:items_attributes]
-    item_params.each do |_index, item_param|
-      @bill.items.build(item_param)
+    items = []
+    10.times do |i|
+      item_params = params[:bill][:item][i.to_s]
+      item = Item.new(
+        name: item_params[:name],
+        description: item_params[:description],
+        unity: item_params[:unity],
+        quantity: item_params[:quantity],
+        unit_price: item_params[:unit_price]
+      )
+      item.total_price = item.quantity.to_f * item.unit_price.to_f
+      items << item if item.name.present?
     end
+    @bill.items = items
+
+    # item_params = params[:bill][:items_attributes]
+    # if item_params.present?
+    #   item_params.each do |item_param|
+    #     item_param[:total_price] = item_param[:quantity].to_f * item_param[:unit_price].to_f
+    #     @bill.items.build!(item_param)
+    #   end
+    # end
 
     client = Client.new(
       name: params[:bill][:client_attributes][:name],

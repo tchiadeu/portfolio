@@ -29,7 +29,32 @@
 
     <% end %>
 
-    <%= form.button 'Ajouter un article', data: { action: "click->items#addItem" } %>
+    <button data-action="click->items#addItem">
+      <p>Ajouter un article</p>
+    </button>
+
+    <% 10.times do |i| %>
+      <div data-items-target="items">
+        <%= form.fields_for :item, index: i do |item_fields| %>
+
+          <%= item_fields.label :name, "Désignation" %>
+          <%= item_fields.text_field :name %>
+
+          <%= item_fields.label :description, "Description" %>
+          <%= item_fields.text_field :description %>
+
+          <%= item_fields.label :unity, "Unité" %>
+          <%= item_fields.select :unity, in: Item::UNITY %>
+
+          <%= item_fields.label :quantity, "Quantité" %>
+          <%= item_fields.text_field :quantity %>
+
+          <%= item_fields.label :unit_price, "Prix unitaire" %>
+          <%= item_fields.text_field :unit_price %>
+
+        <% end %>
+      </div>
+    <% end %>
 
     <%= form.submit "Générer la facture" %>
   <% end %>
