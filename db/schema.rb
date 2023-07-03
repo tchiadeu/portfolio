@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_28_152329) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_02_091410) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -19,6 +19,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_152329) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.integer "siret_number"
+    t.string "tva_number"
+    t.string "address"
+    t.string "post_code"
+    t.string "city"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
@@ -28,13 +34,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_152329) do
     t.float "total_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "unity"
-    t.float "quantity"
     t.boolean "payed", default: false
     t.integer "client_id", null: false
     t.integer "admin_id", null: false
-    t.float "unit_price"
     t.integer "year"
+    t.date "emission_date"
+    t.date "due_date"
+    t.string "month"
     t.index ["admin_id"], name: "index_bills_on_admin_id"
     t.index ["client_id"], name: "index_bills_on_client_id"
   end
@@ -54,7 +60,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_152329) do
     t.index ["admin_id"], name: "index_clients_on_admin_id"
   end
 
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "unity"
+    t.float "quantity"
+    t.float "unit_price"
+    t.float "total_price"
+    t.integer "bill_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bill_id"], name: "index_items_on_bill_id"
+  end
+
   add_foreign_key "bills", "admins"
   add_foreign_key "bills", "clients"
   add_foreign_key "clients", "admins"
+  add_foreign_key "items", "bills"
 end
