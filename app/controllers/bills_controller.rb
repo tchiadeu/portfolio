@@ -81,7 +81,7 @@ class BillsController < ApplicationController
     @bill.admin = current_admin
     @bill.month = Date.today.month
     @bill.year = Date.today.year
-    @bill.number = (Bill.where(year: @bill.year).count + 1)
+    Bill.where(year: @bill.year).count < 9 ? @bill.number = "0#{Bill.where(year: @bill.year).count + 1}" : @bill.number = "#{Bill.where(year: @bill.year).count + 1}"
     @bill.emission_date = Date.today
     @bill.due_date = Date.today + 30
     current_year_amount > 32_000 ? @bill.total_amount = @bill.items.sum(:total_price) * 1.2 : @bill.total_amount = @bill.items.sum(:total_price)
