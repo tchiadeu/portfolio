@@ -24,6 +24,7 @@ class BillsController < ApplicationController
     build_bill
     build_client
     build_items
+    @bill.total_amount = @bill.items.sum(:total_price)
     if @bill.save
       redirect_to dashboard_path
     else
@@ -46,6 +47,18 @@ class BillsController < ApplicationController
   # end
 
   private
+
+  def bill_params
+    params.require(:bill).permit(
+      :number, :payed, :total_amount, :year, :emission_date, :due_date, :month,
+      client_attributes: %i[name address post_code city siret_number tva_number email phone_number],
+      items_attributes: %i[name description unity quantity unit_price total_price]
+    )
+  end
+
+  def current_year_amount
+    Bill.where(year: @bill.year, admin: current_admin).sum(:total_amount)
+  end
 
   def build_client
     client = Client.new(
@@ -71,6 +84,7 @@ class BillsController < ApplicationController
     @bill.number = (Bill.where(year: @bill.year).count + 1)
     @bill.emission_date = Date.today
     @bill.due_date = Date.today + 30
+    current_year_amount > 32_000 ? @bill.total_amount = @bill.items.sum(:total_price) * 1.2 : @bill.total_amount = @bill.items.sum(:total_price)
   end
 
   def build_items
@@ -86,13 +100,5 @@ class BillsController < ApplicationController
       item.total_price = item.quantity.to_f * item.unit_price.to_f
       @bill.items << item if item.name.present?
     end
-  end
-
-  def bill_params
-    params.require(:bill).permit(
-      :number, :payed, :total_amount, :year, :emission_date, :due_date, :month,
-      client_attributes: %i[name address post_code city siret_number tva_number email phone_number],
-      items_attributes: %i[name description unity quantity unit_price total_price]
-    )
   end
 end
