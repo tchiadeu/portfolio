@@ -25,11 +25,7 @@ class BillsController < ApplicationController
     @bill.admin = current_admin
     @bill.month = Date.today.month
     @bill.year = Date.today.year
-    if Bill.where(year: @bill.year) < 10
-      @bill.number = "0#{Bill.where(year: @bill.year).count + 1}"
-    else
-      @bill.number = (Bill.where(year: @bill.year).count + 1).to_s
-    end
+    @bill.number = (Bill.where(year: @bill.year).count + 1)
     @bill.emission_date = Date.today
     @bill.due_date = Date.today + 30
 

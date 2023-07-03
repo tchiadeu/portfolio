@@ -1,1 +1,8 @@
 <%= link_to "Nouvelle Facture", new_bill_path %>
+
+<div>
+  <p>liste des factures</p>
+  <% @bills.each do |bill| %>
+    <%= link_to bill.number, bill_path(bill, format: :pdf) %>
+  <% end %>
+</div>
