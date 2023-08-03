@@ -29,14 +29,15 @@ export default class extends Controller {
         if (targetIndex === 0 && entry.intersectionRatio > ratio) {
           body.classList.remove("change-to-white")
           body.classList.add("change-to-black")
-          this.contentContainerTarget.style.visibility = "hidden"
+          this.contentContainerTarget.classList.add("unreveal")
           setTimeout(() => {
             entry.target.classList.remove("unreveal")
             entry.target.classList.add("reveal")
             aboutObserver.unobserve(entry.target)
           }, 200)
           setTimeout(() => {
-          this.contentContainerTarget.style.visibility = "visible"
+          this.contentContainerTarget.classList.remove("unreveal")
+          this.contentContainerTarget.classList.add("reveal")
           this.contentContainerTarget.classList.add("change-to-white")
         }, 3000)
         } else if (entry.intersectionRatio > ratio) {
@@ -58,14 +59,15 @@ export default class extends Controller {
         if (targetIndex === 0 && entry.intersectionRatio > projectRatio) {
           body.classList.remove("change-to-black")
           body.classList.add("change-to-white")
-          this.aboutContainerTarget.style.visibility = "hidden"
+          this.aboutContainerTarget.classList.add("unreveal")
           setTimeout(() => {
             entry.target.classList.remove("unreveal")
             entry.target.classList.add("reveal")
             projectObserver.unobserve(entry.target)
           }, 200)
           setTimeout(() => {
-            this.aboutContainerTarget.style.visibility = "visible"
+            this.aboutContainerTarget.classList.remove("unreveal")
+            this.aboutContainerTarget.classList.add("reveal")
             this.aboutContainerTarget.classList.add("change-to-black")
           }, 3000)
         } else if (entry.intersectionRatio > projectRatio) {
@@ -87,14 +89,15 @@ export default class extends Controller {
         if (targetIndex === 0 && entry.intersectionRatio > ratio) {
           body.classList.remove("change-to-white")
           body.classList.add("change-to-black")
-          this.projectContainerTarget.style.visibility = "hidden"
+          this.projectContainerTarget.classList.add("unreveal")
           setTimeout(() => {
             entry.target.classList.remove("unreveal")
             entry.target.classList.add("reveal")
             contactObserver.unobserve(entry.target)
           }, 200);
           setTimeout(() => {
-            this.projectContainerTarget.style.visibility = "visible"
+            this.projectContainerTarget.classList.remove("unreveal")
+            this.projectContainerTarget.classList.add("reveal")
             this.projectContainerTarget.classList.add("change-to-white")
           }, 3000)
         } else if (entry.intersectionRatio > ratio) {
