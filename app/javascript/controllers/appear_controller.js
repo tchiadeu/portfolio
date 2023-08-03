@@ -65,7 +65,7 @@ export default class extends Controller {
             projectObserver.unobserve(entry.target)
           }, 200)
           setTimeout(() => {
-            this.contentContainerTarget.style.visibility = "visible"
+            this.aboutContainerTarget.style.visibility = "visible"
             this.aboutContainerTarget.classList.add("change-to-black")
           }, 3000)
         } else if (entry.intersectionRatio > projectRatio) {
@@ -94,7 +94,7 @@ export default class extends Controller {
             contactObserver.unobserve(entry.target)
           }, 200);
           setTimeout(() => {
-            this.contentContainerTarget.style.visibility = "visible"
+            this.projectContainerTarget.style.visibility = "visible"
             this.projectContainerTarget.classList.add("change-to-white")
           }, 3000)
         } else if (entry.intersectionRatio > ratio) {
