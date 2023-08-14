@@ -60,7 +60,7 @@ Rails.application.configure do
   config.assets.quiet = true
 
   # Testing on Smartphone
-  config.hosts << "itchy-bottles-matter.loca.lt"
+  config.hosts << "late-ants-hug.loca.lt"
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
