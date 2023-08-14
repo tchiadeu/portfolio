@@ -11,7 +11,7 @@ export default class extends Controller {
     this.pageCategories.forEach((category) => {
       category.style.display = "none"
     })
-    this.backgroundTarget.style.background = "black";
+    this.backgroundTarget.classList.add("smartphone-options-background")
     this.navbarNameTarget.style.color = "white";
     this.smartphoneOptionsTarget.style.display = "block";
     this.navbarCrossTarget.style.display = "block";
@@ -22,7 +22,7 @@ export default class extends Controller {
     this.pageCategories.forEach((category) => {
       category.style.display = "block"
     })
-    this.backgroundTarget.style.background = "white";
+    this.backgroundTarget.classList.remove("smartphone-options-background")
     this.navbarNameTarget.style.color = "black";
     this.smartphoneOptionsTarget.style.display = "none";
     this.navbarCrossTarget.style.display = "none";
