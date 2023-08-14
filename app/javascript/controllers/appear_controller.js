@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = [
     "about", "contact", "project",
     "contentContainer", "aboutContainer", "projectContainer"
-   ]
+  ]
 
   connect() {
     const body = document.body

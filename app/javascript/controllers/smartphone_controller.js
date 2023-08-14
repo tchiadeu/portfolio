@@ -2,8 +2,10 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="smartphone"
 export default class extends Controller {
-  static targets = [ "smartphoneOptions", "navbarName", "navbarBurger", "navbarCross",
-                     "background", "content", "about", "projects", "contact" ]
+  static targets = [
+    "smartphoneOptions", "navbarName", "navbarBurger", "navbarCross",
+    "background", "content", "about", "projects", "contact"
+  ]
 
   pageCategories = [this.contentTarget, this.aboutTarget, this.projectsTarget, this.contactTarget]
 
@@ -12,6 +14,7 @@ export default class extends Controller {
       category.style.display = "none"
     })
     this.backgroundTarget.classList.remove("change-to-white")
+    this.backgroundTarget.classList.remove("white-smartphone-background")
     this.backgroundTarget.classList.add("black-smartphone-background")
     this.navbarNameTarget.style.color = "white";
     this.smartphoneOptionsTarget.style.display = "block";
@@ -22,7 +25,9 @@ export default class extends Controller {
     this.pageCategories.forEach((category) => {
       category.style.display = "block"
     })
+    this.backgroundTarget.classList.remove("change-to-white")
     this.backgroundTarget.classList.remove("black-smartphone-background")
+    this.backgroundTarget.classList.add("white-smartphone-background")
     this.navbarNameTarget.style.color = "black";
     this.smartphoneOptionsTarget.style.display = "none";
     this.navbarCrossTarget.style.display = "none";
