@@ -45,6 +45,11 @@
     transform: translateX(-50%);
   }
 
+  .hidden-project {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
   .reveal {
     opacity: 1 !important;
     visibility: visible !important;
