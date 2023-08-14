@@ -15,6 +15,7 @@ export default class extends Controller {
     })
     this.backgroundTarget.classList.remove("change-to-white")
     this.backgroundTarget.classList.remove("white-smartphone-background")
+    this.navbarBurgerTarget.style.display = "none";
     this.backgroundTarget.classList.add("black-smartphone-background")
     this.navbarNameTarget.style.color = "white";
     this.smartphoneOptionsTarget.style.display = "block";
@@ -27,10 +28,11 @@ export default class extends Controller {
     })
     this.backgroundTarget.classList.remove("change-to-white")
     this.backgroundTarget.classList.remove("black-smartphone-background")
-    this.backgroundTarget.classList.add("white-smartphone-background")
-    this.navbarNameTarget.style.color = "black";
     this.smartphoneOptionsTarget.style.display = "none";
     this.navbarCrossTarget.style.display = "none";
+    this.backgroundTarget.classList.add("white-smartphone-background")
+    this.navbarNameTarget.style.color = "black";
+    this.navbarBurgerTarget.style.display = "block";
   }
 
   scrollTo(event) {
@@ -38,10 +40,13 @@ export default class extends Controller {
     this.pageCategories.forEach((category) => {
       category.style.display = "block"
     })
-    this.backgroundTarget.style.background = "white"
+    this.backgroundTarget.classList.remove("change-to-white")
+    this.backgroundTarget.classList.remove("white-smartphone-background")
+    this.backgroundTarget.classList.add("black-smartphone-background")
     this.navbarNameTarget.style.color = "black"
     this.smartphoneOptionsTarget.style.display = "none"
     this[`${categoryTarget}Target`].scrollIntoView({ behavior: 'smooth', block: 'start' })
     this.navbarCrossTarget.style.display = "none"
+    this.navbarBurgerTarget.style.display = "block"
   }
 }

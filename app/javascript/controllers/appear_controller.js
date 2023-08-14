@@ -112,5 +112,8 @@ export default class extends Controller {
     this.contactTargets.forEach((target) => {
       contactObserver.observe(target)
     })
+
+    // const containerObserver = new IntersectionObserver(containerHandleIntersect, options)
+    // containerObserver.observ
   }
 }
