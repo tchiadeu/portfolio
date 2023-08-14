@@ -11,22 +11,23 @@ export default class extends Controller {
     this.pageCategories.forEach((category) => {
       category.style.display = "none"
     })
-    this.backgroundTarget.classList.add("smartphone-options-background")
+    this.backgroundTarget.classList.remove("change-to-white")
+    this.backgroundTarget.classList.remove("white-smartphone-background")
+    this.backgroundTarget.classList.add("black-smartphone-background")
     this.navbarNameTarget.style.color = "white";
     this.smartphoneOptionsTarget.style.display = "block";
     this.navbarCrossTarget.style.display = "block";
-    this.navbarBurgerTarget.style.display = "none";
   }
 
   closeOptions() {
     this.pageCategories.forEach((category) => {
       category.style.display = "block"
     })
-    this.backgroundTarget.classList.remove("smartphone-options-background")
+    this.backgroundTarget.classList.remove("black-smartphone-background")
+    this.backgroundTarget.classList.add("white-smartphone-background")
     this.navbarNameTarget.style.color = "black";
     this.smartphoneOptionsTarget.style.display = "none";
     this.navbarCrossTarget.style.display = "none";
-    this.navbarBurgerTarget.style.display = "block";
   }
 
   scrollTo(event) {
