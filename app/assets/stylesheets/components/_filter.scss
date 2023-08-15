@@ -3,11 +3,11 @@
 }
 
 .change-to-black {
-  animation: white-to-black 1s ease-in-out forwards;
+  animation: white-to-black 700ms ease-in-out forwards;
 }
 
 .change-to-white {
-  animation: black-to-white 1s ease-in-out forwards;
+  animation: black-to-white 700ms ease-in-out forwards;
 }
 
 @keyframes black-to-white {

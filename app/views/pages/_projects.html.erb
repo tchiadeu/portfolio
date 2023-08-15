@@ -1,11 +1,17 @@
-<div data-smartphone-target='projects' data-scroll-target='projects' data-appear-target='projectContainer'
-     class="container-basic container-padding-y">
-  <div data-appear-target='project' class="projects-title hidden-bottom">
+<div
+  data-smartphone-target='projects' data-scroll-target='projects'
+  data-appear-target="projectContainer"
+  class="container-basic container-padding-y"
+>
+  <div data-appear-target='project projectContainerTrigger' data-category="project" class="projects-title hidden-bottom">
     <p class='text-grey'>2023</p>
     <h2>PROJETS RÉALISÉS</h2>
   </div>
   <div class="projects-grid">
-    <div data-appear-target='project' class="project-card hidden-project"> <%# To duplicate for each project %>
+    <div
+      data-category="project" class="project-card hidden-project"
+      data-appear-target='project projectContainerTrigger'
+    > <%# To duplicate for each project /  "projectContainer" has to be on the last project %>
       <div class="project-cover">
         <%= image_tag 'projects_cover/breizh_secrets.jpg', class: 'project-image'%>
         <div class="project-date">

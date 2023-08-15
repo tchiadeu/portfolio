@@ -1,7 +1,6 @@
-<div data-smartphone-target='about' data-scroll-target='about' data-appear-target='aboutContainer'
-     class="container-basic container-padding-y">
+<div data-smartphone-target='about' data-appear-target="aboutContainer" data-scroll-target='about' class="container-basic container-padding-y">
   <div class="about-disclaimer">
-    <p data-appear-target='about' class='text-grey left-hidden'>À PROPOS</p>
+    <p data-appear-target='about aboutContainerTrigger' data-category="about" class='text-grey left-hidden'>À PROPOS</p>
     <div class='disclaimer-list'>
       <h3 data-appear-target='about' class='text-white spacing-little-line hidden-bottom'>
         Passionné par les technologies du web, je suis un développeur fullstack qui aime combiner créativité et convivialité des interfaces.
@@ -57,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div class="skill-category">
+      <div class="skill-category" data-category="about" data-appear-target='aboutContainerTrigger'>
         <h4 data-appear-target='about' class='text-white hidden-bottom'>Base de données</h4>
         <div class="skill-category-wrapper">
           <div data-appear-target='about' class='skill-category-row skills-hidden skills-hidden-smartphone'>

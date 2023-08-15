@@ -1,7 +1,7 @@
 <div data-controller='loading'>
   <%= render 'loading_page' %>
   <div data-controller='scroll appear smartphone' data-loading-target='landing' class='landing'>
-    <div data-smartphone-target='background' data-appear-target="contentContainer" class="container-basic container-full-height">
+    <div data-smartphone-target='background' data-category="content" data-appear-target="contentContainer" class="container-basic container-full-height">
       <%= render 'navbar' %>
       <div data-smartphone-target='smartphoneOptions' class='smartphone-options'>
         <div data-action='click->smartphone#scrollTo' data-category="about" class='button'>
