@@ -3,6 +3,38 @@
   <div class="smartphone">
     <div class="smartphone-content">
       <!-- Inset the content here to have the background as you are navigating through the smartphone -->
+      <%= image_tag "avatar.png", alt: "photo kevin tchiadeu", class: "avatar" %>
+      <div>
+        <h4 class="text-white">Kévin TCHIADEU</h4>
+        <p class="text-grey">DÉVELOPPEUR FULLSTACK</p>
+      </div>
+      <div class="break-bar"></div>
+      <div class="social-media">
+        <a href="https://www.kevintchiadeu.com" target="_blank">
+          <div class="social-media-block">
+            <%= image_tag "icones_social_media/website.png", alt: "site", class: "social-media-icon" %>
+            <p class="text-white text-large">Site</p>
+          </div>
+        </a>
+        <a href="mailto:contact@kevintchiadeu.com" target="_blank">
+          <div class="social-media-block">
+            <%= image_tag "icones_social_media/gmail.png", alt: "mail", class: "social-media-icon" %>
+            <p class="text-white text-large">Mail</p>
+          </div>
+        </a>
+        <%= link_to "https://www.linkedin.com/in/kevin-tchiadeu/", target: "_blank" do %>
+          <div class="social-media-block">
+            <%= image_tag "icones_social_media/linkedin.png", alt: "linkedin", class: "social-media-icon" %>
+            <p class="text-white text-large">Linkedin</p>
+          </div>
+        <% end %>
+        <%= link_to "https://github.com/tchiadeu", target: "_blank" do %>
+          <div class="social-media-block">
+            <%= image_tag "icones_social_media/github.png", alt: "github", class: "social-media-icon" %>
+            <p class="text-white text-large">Github</p>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
