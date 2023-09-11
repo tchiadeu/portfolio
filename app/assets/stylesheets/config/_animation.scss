@@ -3,11 +3,6 @@
   transform: translateY(50%);
 }
 
-.left-hidden {
-  opacity: 0;
-  transform: translateX(-50%);
-}
-
 .hidden-project {
   opacity: 0;
   transform: translateY(20%);
@@ -65,6 +60,11 @@
     animation: image-appear 1000ms ease-in-out forwards;
     animation-delay: 1850ms;
   }
+
+  .left-hidden {
+    opacity: 0;
+    transform: translateY(50%);
+  }
 }
 
 @media (min-width: 576px) {
@@ -105,6 +105,11 @@
   .image-reveal {
     animation: image-appear 1000ms ease-in-out forwards;
     animation-delay: 1350ms;
+  }
+
+  .left-hidden {
+    opacity: 0;
+    transform: translateX(-50%);
   }
 }
 

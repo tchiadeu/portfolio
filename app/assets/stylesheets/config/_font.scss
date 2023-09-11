@@ -104,21 +104,21 @@ a {
   }
 }
 
-@media (min-width: 576px) and (max-height: 650px) {
-  h1 {
-    font-size: 5vw;
-  }
+// @media (min-width: 576px) and (max-height: 650px) {
+//   h1 {
+//     font-size: 5vw;
+//   }
 
-  .text-responsive {
-    font-size: 1.125em;
-  }
+//   .text-responsive {
+//     font-size: 1.125em;
+//   }
 
-  .spacing-large-line {
-    line-height: 1.7;
-  }
-}
+//   .spacing-large-line {
+//     line-height: 1.7;
+//   }
+// }
 
-@media (min-height: 650px) {
+@media (min-width: 576px) {
   h1 {
     font-size: 5.9vw;
   }
