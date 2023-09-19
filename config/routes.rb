@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: 'pages#home'
   get 'contacter', to: "pages#contacter"
-  get 'contact.vcf', to: 'pages#vcard', as: 'add_contact'
+  get 'contact.vcf', to: 'pages#contact', as: 'add_contact'
 end

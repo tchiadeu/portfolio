@@ -4,11 +4,13 @@
     <div class="smartphone-content">
       <!-- Inset the content here to have the background as you are navigating through the smartphone -->
       <%= image_tag "avatar.png", alt: "photo kevin tchiadeu", class: "avatar" %>
-      <div>
+      <div class="smartphone-infos">
         <h4 class="text-white">Kévin TCHIADEU</h4>
         <p class="text-grey">DÉVELOPPEUR FULLSTACK</p>
         <%= link_to add_contact_path do %>
-          <p class="text-grey">Ajouter à mes contacts</p>
+          <div class="button button-black">
+            <p class="text-medium">Ajouter à mes contacts</p>
+          </div>
         <% end %>
       </div>
       <div class="break-bar"></div>
