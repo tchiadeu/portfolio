@@ -5,4 +5,7 @@ class PagesController < ApplicationController
 
   def contacter
   end
+
+  def vcard
+  end
 end
