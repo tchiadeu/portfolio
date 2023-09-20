@@ -8,8 +8,9 @@
         <h4 class="text-white">Kévin TCHIADEU</h4>
         <p class="text-grey">DÉVELOPPEUR FULLSTACK</p>
         <%= link_to add_contact_path do %>
-          <div class="button button-black">
+          <div class="button-smartphone">
             <p class="text-medium">Ajouter à mes contacts</p>
+            <i class="fa-regular fa-address-book"></i>
           </div>
         <% end %>
       </div>
@@ -21,10 +22,10 @@
             <p class="text-white text-large">Site</p>
           </div>
         </a>
-        <a href="mailto:contact@kevintchiadeu.com" target="_blank">
+        <a href="https://www.calendly.com/kevintchiadeu" target="_blank">
           <div class="social-media-block">
-            <%= image_tag "icones_social_media/gmail.png", alt: "mail", class: "social-media-icon" %>
-            <p class="text-white text-large">Mail</p>
+            <%= image_tag "icones_social_media/calendly.png", alt: "calendly", class: "social-media-icon" %>
+            <p class="text-white text-large">Calendly</p>
           </div>
         </a>
         <%= link_to "https://www.linkedin.com/in/kevin-tchiadeu/", target: "_blank" do %>
