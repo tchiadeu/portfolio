@@ -8,48 +8,33 @@
     <h2>PROJETS RÉALISÉS</h2>
   </div>
   <div class="projects-grid">
-    <div
-      data-category="project" class="project-card hidden-project"
-      data-appear-target='project projectContainerTrigger'
-    > <%# To duplicate for each project /  "projectContainer" has to be on the last project %>
-      <div class="project-cover">
-        <%= image_tag 'projects_cover/breizh_secrets.jpg', class: 'project-image', alt: "projet breizh secrets" %>
-        <div class="project-date">
-          <p class="text-white text-small text-visible">MARS 2023</p>
-        </div>
-        <div class="project-skills-list">
-          <div class="project-skill">
-            <p class="text-white text-small text-visible">RAILS</p>
-          </div>
-          <div class="project-skill">
-            <p class="text-white text-small text-visible">POSTGRE SQL</p>
-          </div>
-          <div class="project-skill">
-            <p class="text-white text-small text-visible">HTML</p>
-          </div>
-          <div class="project-skill">
-            <p class="text-white text-small text-visible">CSS</p>
-          </div>
-          <div class="project-skill">
-            <p class="text-white text-small text-visible">STIMULUS</p>
-          </div>
-        </div>
-      </div>
-      <div class="project-infos">
-        <div>
-          <h5>BREIZH SECRETS</h5>
-          <p class='text-grey text-regular'>Site de partage de secrets</p>
-        </div>
-        <%= link_to 'https://www.breizhsecrets.eu/', target: '_blank' do %>
-          <div class="project-icone-plus-smartphone">
-            <%= image_tag 'icones/plus.svg' %>
-            <p>Découvrir</p>
-          </div>
-          <div class="project-icone-plus">
-            <%= image_tag 'icones/plus.svg' %>
-          </div>
-        <% end %>
-      </div>
-    </div>
+    <%=
+      render partial: "project",
+      locals: {
+        trigger: "",
+        cover_image: "breizh_secrets.jpg",
+        alt: "Photo des remparts de St Malo",
+        month: "mars",
+        year: "2023",
+        skills: ["rails", "postgre sql", "html", "css", "stimulus"],
+        project_name: "breizh secrets",
+        project_description: "Application de découverte de la Bretagne sous forme de jeu de piste",
+        url: "https://www.breizhsecrets.eu"
+      }
+    %>
+    <%=
+      render partial: "project",
+      locals: {
+        trigger: "projectContainerTrigger",
+        cover_image: "s&s_calendar.png",
+        alt: "Aperçu landing page S&S Calendar",
+        month: "septembre",
+        year: "2023",
+        skills: ["rails", "google calendar API", "google vision API"],
+        project_name: "Snap & Sync Calendar",
+        project_description: "Application de gestion de calendrier synchronisé avec Google Calendar",
+        url: "https://from-pics-to-calendar.osc-fr1.scalingo.io/users/sign_in"
+      }
+    %>
   </div>
 </div>

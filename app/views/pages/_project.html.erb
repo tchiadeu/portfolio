@@ -1,0 +1,30 @@
+<div data-category="project" class="project-card hidden-project" data-appear-target='project <%= trigger %>'>
+  <div class="project-cover">
+    <%= image_tag "projects_cover/#{cover_image}", class: 'project-image', alt: alt %>
+    <div class="project-date">
+      <p class="text-white text-small text-visible"><%= month.upcase %> <%= year %></p>
+    </div>
+    <div class="project-skills-list">
+      <% skills.each do |skill| %>
+        <div class="project-skill">
+          <p class="text-white text-small text-visible"><%= skill.upcase %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="project-infos">
+    <div>
+      <h5><%= project_name.upcase %></h5>
+      <p class='text-grey text-regular'><%= project_description %></p>
+    </div>
+    <%= link_to url, target: '_blank' do %>
+      <div class="project-icone-plus-smartphone">
+        <%= image_tag 'icones/plus.svg' %>
+        <p>Découvrir</p>
+      </div>
+      <div class="project-icone-plus">
+        <%= image_tag 'icones/plus.svg' %>
+      </div>
+    <% end %>
+  </div>
+</div>
