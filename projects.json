@@ -1,0 +1,11 @@
+[
+    {
+        "title": "title",
+        "description": "my_description_goes_here",
+        "coverUrl": "test",
+        "skills": ["test", "other"],
+        "month": "Mars",
+        "year": 2023,
+        "url": "kevin.tchiadeu.com"
+    }
+]
